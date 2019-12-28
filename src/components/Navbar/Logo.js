@@ -1,0 +1,24 @@
+import React from "react"
+import { Link } from "gatsby";
+import styled from "styled-components"
+import logo_white from "../../../static/img/logo_white.png";
+
+const LogoContainer = styled.div`
+  margin-left: 15px;
+`
+
+const Img = styled.img`
+  width: 120px;
+`
+
+const LogoImg = (props) => (
+  <Link to={props.to}>
+    <Img src={logo_white}/>
+  </Link>
+);
+
+export const Logo = (props) => (
+ <LogoContainer>
+   <LogoImg to={props.to} />
+ </LogoContainer>
+)
