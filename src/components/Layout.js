@@ -10,7 +10,7 @@ import Modal from './Modal'
 const TemplateWrapper = ({ children, isShow, setIsShow, modalData }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div style={{ maxWidth: `960px`, margin: `0 auto`}}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -51,8 +51,8 @@ const TemplateWrapper = ({ children, isShow, setIsShow, modalData }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-      <Footer />
-      <Modal isShow={isShow} setIsShow={setIsShow} modalData={modalData}></Modal>
+      {/*<Footer />*/}
+      {/*<Modal isShow={isShow} setIsShow={setIsShow} modalData={modalData}></Modal>*/}
     </div>
   )
 }

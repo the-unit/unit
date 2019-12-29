@@ -23,7 +23,7 @@ Modal.propTypes = {
   isShow: PropTypes.bool,
   name: PropTypes.string,
   subName: PropTypes.string,
-  establishmentYear: PropTypes.string,
+  establishmentYear: PropTypes.number,
   slogan: PropTypes.string,
   introduction: PropTypes.string,
   location: PropTypes.string,

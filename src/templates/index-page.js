@@ -46,9 +46,18 @@ export const IndexPageTemplate = ({
             flexDirection: "column",
           }}
         >
-          <div style={{justifyContent: "center", width: "320px", height: "60px", backgroundColor: "rgba(24, 111, 37, 0.85)", alignItems: "center", display: "flex", fontSize: "24px", fontWeight: "bold", marginBottom: "6px" }}>
+          <div style={{
+            justifyContent: "center",
+            width: "320px",
+            height: "60px",
+            backgroundColor: "rgba(24, 111, 37, 0.85)",
+            alignItems: "center",
+            display: "flex",
+            fontSize: "24px",
+            fontWeight: "bold",
+            marginBottom: "6px",
+          }}>
             <span
-              className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen main-bg-color box-main-color"
               style={{
                 color: "white",
                 lineHeight: "1",
@@ -59,9 +68,17 @@ export const IndexPageTemplate = ({
               {heading}
             </span>
           </div>
-          <div style={{justifyContent: "center", width: "320px", height: "29px", backgroundColor: "rgba(24, 111, 37, 0.85)", alignItems: "center", display: "flex", fontSize: "16px", fontWeight: "bold"}}>
+          <div style={{
+            justifyContent: "center",
+            width: "320px",
+            height: "29px",
+            backgroundColor: "rgba(24, 111, 37, 0.85)",
+            alignItems: "center",
+            display: "flex",
+            fontSize: "16px",
+            fontWeight: "bold",
+          }}>
             <span
-              className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen main-bg-color box-main-color"
               style={{
                 color: "white",
                 lineHeight: "1",
@@ -74,73 +91,82 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </div>
-
-      {/*</div>*/}
-      {/*<div className="columns is-gapless" style={{ marginBottom: 0 }}>*/}
-      {/*  <div className="column" style={{ position: "relative" }}>*/}
-      {/*    <div*/}
-      {/*      style={{ position: "absolute", zIndex: 10 }}*/}
-      {/*      className="has-text-white-ter"*/}
-      {/*    >*/}
-      {/*      {firstEvent.title} <br/>*/}
-      {/*      {firstEvent.title_kr} <br/>*/}
-      {/*      {firstEvent.date} <br/>*/}
-      {/*      {firstEvent.description}*/}
-      {/*    </div>*/}
-      {/*    <Img*/}
-      {/*      fluid={firstEvent.firstEventImage.image.childImageSharp.fluid}*/}
-      {/*    ></Img>*/}
-      {/*  </div>*/}
-      {/*  <div className="column" style={{ position: "relative" }}>*/}
-      {/*    <div*/}
-      {/*      style={{ position: "absolute", zIndex: 10 }}*/}
-      {/*      className="has-text-white-ter"*/}
-      {/*    >*/}
-      {/*      {secondEvent.title} <br/>*/}
-      {/*      {secondEvent.title_kr} <br/>*/}
-      {/*      {secondEvent.date}*/}
-      {/*      {secondEvent.description}*/}
-      {/*    </div>*/}
-      {/*    <Img*/}
-      {/*      fluid={secondEvent.secondEventImage.image.childImageSharp.fluid}*/}
-      {/*    ></Img>*/}
-      {/*  </div>*/}
-      {/*  <div className="column" style={{ position: "relative" }}>*/}
-      {/*    <div*/}
-      {/*      style={{ position: "absolute", zIndex: 10 }}*/}
-      {/*      className="has-text-white-ter"*/}
-      {/*    >*/}
-      {/*      {thirdEvent.title} <br/>*/}
-      {/*      {thirdEvent.title_kr} <br/>*/}
-      {/*      {thirdEvent.date} <br/>*/}
-      {/*      {thirdEvent.description}*/}
-      {/*    </div>*/}
-      {/*    <Img*/}
-      {/*      fluid={thirdEvent.thirdEventImage.image.childImageSharp.fluid}*/}
-      {/*    ></Img>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
-      {/*/!* Partner *!/*/}
-      {/*<div>*/}
-      {/*  <section className="section section-bg-color">*/}
-      {/*    <div className="container">*/}
-      {/*      <div className="content">*/}
-      {/*        <PartnerRoll count={6} setIsShow={setIsShow} isShow={isShow} setModalData={setModalData}></PartnerRoll>*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*  </section>*/}
-      {/*</div>*/}
-      {/*/!* Sponser *!/*/}
-      {/*<div>*/}
-      {/*  <section className="section section-bg-color">*/}
-      {/*    <div className="container">*/}
-      {/*      <div className="content">*/}
-      {/*        <SponserRoll count={6} setIsShow={setIsShow} isShow={isShow} setModalData={setModalData}></SponserRoll>*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*  </section>*/}
-      {/*</div>*/}
     </div>
+    <div>
+      <div style={{ display: "flex", color: "white" }}>
+        <div style={{ position: "relative", flex: 1 }}>
+          <div
+            style={{ position: "absolute", zIndex: 10, width: "100%" }}
+          >
+            <div style={{
+              marginTop: "30px",
+              textAlign: "center",
+              fontWeight: "bold",
+              fontSize: "16px",
+              color: "#186f25",
+            }}>
+              {firstEvent.title}
+            </div>
+            {/*{firstEvent.title_kr} <br/>*/}
+            {/*{firstEvent.date} <br/>*/}
+            {/*{firstEvent.description}*/}
+          </div>
+          {/*<Img*/}
+          {/*  fluid={firstEvent.firstEventImage.image.childImageSharp.fluid}*/}
+          {/*/>*/}
+        </div>
+        <div style={{ position: "relative", flex: 1 }}>
+          <div
+            style={{ position: "absolute", zIndex: 10, width: "100%" }}
+          >
+            <div style={{
+              marginTop: "30px",
+              textAlign: "center",
+              fontWeight: "bold",
+              fontSize: "16px",
+              color: "#186f25",
+            }}>
+              {secondEvent.title} <br/>
+            </div>
+            {/*{secondEvent.title_kr} <br/>*/}
+            {/*{secondEvent.date}*/}
+            {/*{secondEvent.description}*/}
+          </div>
+          {/*<Img*/}
+          {/*  fluid={secondEvent.secondEventImage.image.childImageSharp.fluid}*/}
+          {/*/>*/}
+        </div>
+        <div style={{ position: "relative", flex: 1 }}>
+          <div
+            style={{ position: "absolute", zIndex: 10, width: "100%" }}
+          >
+            <div style={{
+              marginTop: "30px",
+              textAlign: "center",
+              fontWeight: "bold",
+              fontSize: "16px",
+              color: "#186f25",
+            }}>
+              {thirdEvent.title} <br/>
+            </div>
+            {/*{thirdEvent.title_kr} <br/>*/}
+            {/*{thirdEvent.date} <br/>*/}
+            {/*{thirdEvent.description}*/}
+          </div>
+          {/*<Img*/}
+          {/*  fluid={thirdEvent.thirdEventImage.image.childImageSharp.fluid}*/}
+          {/*/>*/}
+        </div>
+      </div>
+    </div>
+    {/* Partner */}
+    <div className="columns is-multiline" style={{ backgroundColor: "#d8d8d8", margin: 0, padding: '0 20px 0 20px'}}>
+      <PartnerRoll count={6} setIsShow={setIsShow} isShow={isShow} setModalData={setModalData}></PartnerRoll>
+    </div>
+    {/* Sponser */}
+    {/*<div>*/}
+    {/*  <SponserRoll count={6} setIsShow={setIsShow} isShow={isShow} setModalData={setModalData}></SponserRoll>*/}
+    {/*</div>*/}
   </div>
 )
 

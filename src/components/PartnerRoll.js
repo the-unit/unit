@@ -9,50 +9,46 @@ class PartnerRoll extends React.Component {
   render() {
     const { data, count, setIsShow, setModalData } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
+    console.log(posts);
 
     return (
-      <div className="columns is-multiline">
+      <>
         {posts &&
           posts.map(({ node: post }, idx) => {
             if (idx < count)
               return (
-                <div className="is-parent column is-4-desktop is-6-mobile" key={post.id}>
-                  <article
-                    className={`blog-list-item tile is-child box notification`}
-                  >
-                    <header>
-                      {post.frontmatter.logo ? (
-                        <div className="featured-thumbnail">
-                          <PreviewCompatibleImage
-                            imageInfo={{
-                              image: post.frontmatter.logo,
-                              alt: `featured image thumbnail for post ${post.frontmatter.name}`
-                            }}
-                          />
-                        </div>
-                      ) : null}
-                      <p className="post-meta" onClick={() => {setIsShow(true); setModalData(post.frontmatter);}}>
-                          {post.frontmatter.name}
-                        <span> &bull; </span>
-                        <span className="subtitle is-size-5 is-block">
-                          {post.frontmatter.date}
-                        </span>
-                      </p>
-                    </header>
-                    <span>
-                      {post.excerpt}
-                      <br />
-                      <br />
-                    </span>
-                    <div className="button" onClick={() => {setIsShow(true); setModalData(post.frontmatter);}}>
-                      웹페이지
+                <div key={post.id} className="column is-4 is-paddingless" style={{ backgroundColor: 'white', borderRadius: '20px', width: '260px', height: '151px', margin: ((idx % 3) === 1)? '20px 68px 20px 68px' : '20px 0 20px 0'}}>
+                  <div style={{ padding: '21px 20px 11px 20px'}}>
+                    <div>
+                      <span>
+                        { post.frontmatter.name }
+                      </span>
+                      <span style={{float: 'right'}}>
+                        since { post.frontmatter.establishmentYear }
+                      </span>
                     </div>
-                  </article>
+                    <div style={{ margin: '10px 0 0 0'}}>
+                      <span>
+                        { post.frontmatter.introduction }
+                      </span>
+                    </div>
+                    <div>
+                      <div>
+                        웹페이지
+                      </div>
+                      <div>
+                        f
+                      </div>
+                      <div>
+                        m
+                      </div>
+                    </div>
+                  </div>
                 </div>
               );
             else return false;
           })}
-      </div>
+      </>
     );
   }
 }

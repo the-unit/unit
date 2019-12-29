@@ -44,7 +44,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-post"}
       - {label: Name, name: name, widget: string}
       - {label: SubName, name: subName, widget: string}
-      - {label: EstablishmentYear, name: establishmentYear, widget: string}
+      - {label: EstablishmentYear, name: establishmentYear, widget: number}
       - {label: Slogan, name: slogan, widget: string}
       - {label: Introduction, name: introduction, widget: string}
       - {label: Location, name: location, widget: string}
@@ -61,7 +61,7 @@ collections:
       - {label: Name, name: name, widget: string}
       - {label: SubName, name: subName, widget: string}
       - {label: Department, name: dept, widget: string}
-      - {label: EstablishmentYear, name: establishmentYear, widget: string}
+      - {label: EstablishmentYear, name: establishmentYear, widget: number}
       - {label: Slogan, name: slogan, widget: string}
       - {label: Introduction, name: introduction, widget: string}
       - {label: Location, name: location, widget: string}
