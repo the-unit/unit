@@ -8,7 +8,7 @@ const LogoContainer = styled.div`
 `
 
 const Img = styled.img`
-  width: 120px;
+  width: 90px;
 `
 
 const LogoImg = (props) => (

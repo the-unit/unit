@@ -14,17 +14,14 @@ const Index = class extends React.Component {
       <Nav>
         <Logo to={"/"}/>
         <div style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-          <NavBtn to="/">
-            Home
+          <NavBtn to="/aboutus">
+            About Us
           </NavBtn>
           <NavBtn to="/partner">
             Partner
           </NavBtn>
           <NavBtn to="/sponser">
             Sponser
-          </NavBtn>
-          <NavBtn to="/faq">
-            FAQ
           </NavBtn>
           <NavBtn to="/contact">
             Contact

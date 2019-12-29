@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
+import Card from "../components/Card"
+
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const ALL_COUNT = Number.MAX_VALUE;
@@ -12,43 +14,17 @@ class PartnerRoll extends React.Component {
     console.log(posts);
 
     return (
-      <>
+      <div className="columns is-desktop is-multiline is-marginless">
         {posts &&
           posts.map(({ node: post }, idx) => {
             if (idx < count)
               return (
-                <div key={post.id} className="column is-4 is-paddingless" style={{ backgroundColor: 'white', borderRadius: '20px', width: '260px', height: '151px', margin: ((idx % 3) === 1)? '20px 68px 20px 68px' : '20px 0 20px 0'}}>
-                  <div style={{ padding: '21px 20px 11px 20px'}}>
-                    <div>
-                      <span>
-                        { post.frontmatter.name }
-                      </span>
-                      <span style={{float: 'right'}}>
-                        since { post.frontmatter.establishmentYear }
-                      </span>
-                    </div>
-                    <div style={{ margin: '10px 0 0 0'}}>
-                      <span>
-                        { post.frontmatter.introduction }
-                      </span>
-                    </div>
-                    <div>
-                      <div>
-                        웹페이지
-                      </div>
-                      <div>
-                        f
-                      </div>
-                      <div>
-                        m
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  <Card key={"partnerCard"+idx}>
+                  </Card>
               );
             else return false;
           })}
-      </>
+      </div>
     );
   }
 }

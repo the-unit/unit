@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
+import Card from "../components/Card"
 import SponserRoll from "../components/SponserRoll"
 import PartnerRoll from "../components/PartnerRoll"
 
@@ -23,7 +24,7 @@ export const IndexPageTemplate = ({
       style={{
         width: `${document.body.clientWidth}`,
         backgroundRepeat: "no-repeat",
-        height: `${window.innerHeight - 60}px`,
+        height: `${window.innerHeight / 3}px`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundImage: `url(${
@@ -92,77 +93,35 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </div>
+    <div style={{ height: "40px", backgroundColor: "rgba(217,217,217,0.05)" }}>
+    </div>
+    <div className="columns is-desktop is-marginless">
+      {[firstEvent, secondEvent, thirdEvent].map((evt, idx) => {
+        return (
+          <div className="column is-paddingless"
+               style={{ height: "120px", backgroundColor: "rgba(217,217,217,0.05)", textAlign: "center" }} key={`evt-${idx}`}>
+            <span style={{ fontSize: "16px", fontWeight: "bold", color: "#186f25" }}>
+              {evt.title}
+            </span>
+            <br/>
+            <div style={{ marginTop: "8px" }}>
+              <span style={{ fontSize: "14px", color: "#aeaeae" }}>
+                {evt.title_kr} | {evt.date}
+              </span>
+            </div>
+          </div>
+        )
+      })}
+    </div>
+
     <div>
-      <div style={{ display: "flex", color: "white" }}>
-        <div style={{ position: "relative", flex: 1 }}>
-          <div
-            style={{ position: "absolute", zIndex: 10, width: "100%" }}
-          >
-            <div style={{
-              marginTop: "30px",
-              textAlign: "center",
-              fontWeight: "bold",
-              fontSize: "16px",
-              color: "#186f25",
-            }}>
-              {firstEvent.title}
-            </div>
-            {/*{firstEvent.title_kr} <br/>*/}
-            {/*{firstEvent.date} <br/>*/}
-            {/*{firstEvent.description}*/}
-          </div>
-          {/*<Img*/}
-          {/*  fluid={firstEvent.firstEventImage.image.childImageSharp.fluid}*/}
-          {/*/>*/}
-        </div>
-        <div style={{ position: "relative", flex: 1 }}>
-          <div
-            style={{ position: "absolute", zIndex: 10, width: "100%" }}
-          >
-            <div style={{
-              marginTop: "30px",
-              textAlign: "center",
-              fontWeight: "bold",
-              fontSize: "16px",
-              color: "#186f25",
-            }}>
-              {secondEvent.title} <br/>
-            </div>
-            {/*{secondEvent.title_kr} <br/>*/}
-            {/*{secondEvent.date}*/}
-            {/*{secondEvent.description}*/}
-          </div>
-          {/*<Img*/}
-          {/*  fluid={secondEvent.secondEventImage.image.childImageSharp.fluid}*/}
-          {/*/>*/}
-        </div>
-        <div style={{ position: "relative", flex: 1 }}>
-          <div
-            style={{ position: "absolute", zIndex: 10, width: "100%" }}
-          >
-            <div style={{
-              marginTop: "30px",
-              textAlign: "center",
-              fontWeight: "bold",
-              fontSize: "16px",
-              color: "#186f25",
-            }}>
-              {thirdEvent.title} <br/>
-            </div>
-            {/*{thirdEvent.title_kr} <br/>*/}
-            {/*{thirdEvent.date} <br/>*/}
-            {/*{thirdEvent.description}*/}
-          </div>
-          {/*<Img*/}
-          {/*  fluid={thirdEvent.thirdEventImage.image.childImageSharp.fluid}*/}
-          {/*/>*/}
-        </div>
-      </div>
+      <PartnerRoll count={6}>
+      </PartnerRoll>
     </div>
     {/* Partner */}
-    <div className="columns is-multiline" style={{ backgroundColor: "#d8d8d8", margin: 0, padding: '0 20px 0 20px'}}>
-      <PartnerRoll count={6} setIsShow={setIsShow} isShow={isShow} setModalData={setModalData}></PartnerRoll>
-    </div>
+    {/*<div className="columns is-multiline" style={{ backgroundColor: "rgba(217,217,217,0.05)", margin: 0, padding: "0 20px 0 20px" }}>*/}
+    {/*  <PartnerRoll count={6} setIsShow={setIsShow} isShow={isShow} setModalData={setModalData}></PartnerRoll>*/}
+    {/*</div>*/}
     {/* Sponser */}
     {/*<div>*/}
     {/*  <SponserRoll count={6} setIsShow={setIsShow} isShow={isShow} setModalData={setModalData}></SponserRoll>*/}
