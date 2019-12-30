@@ -4,9 +4,11 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
-import Card from "../components/Card"
+import Button from "../components/Button"
 import SponserRoll from "../components/SponserRoll"
+import Divider from "../components/Divider"
 import PartnerRoll from "../components/PartnerRoll"
+import Footer from "../components/Footer"
 
 export const IndexPageTemplate = ({
                                     image,
@@ -19,7 +21,7 @@ export const IndexPageTemplate = ({
                                     isShow,
                                     setModalData,
                                   }) => (
-  <div>
+  <div style={{ display: 'block' }}>
     <div
       style={{
         width: `${document.body.clientWidth}`,
@@ -99,7 +101,8 @@ export const IndexPageTemplate = ({
       {[firstEvent, secondEvent, thirdEvent].map((evt, idx) => {
         return (
           <div className="column is-paddingless"
-               style={{ height: "120px", backgroundColor: "rgba(217,217,217,0.05)", textAlign: "center" }} key={`evt-${idx}`}>
+               style={{ height: "120px", backgroundColor: "rgba(217,217,217,0.05)", textAlign: "center" }}
+               key={`evt-${idx}`}>
             <span style={{ fontSize: "16px", fontWeight: "bold", color: "#186f25" }}>
               {evt.title}
             </span>
@@ -113,19 +116,35 @@ export const IndexPageTemplate = ({
         )
       })}
     </div>
-
+    <div style={{ height: "40px" }}>
+      <Divider title={"Partner"}>
+      </Divider>
+    </div>
     <div>
       <PartnerRoll count={6}>
       </PartnerRoll>
     </div>
-    {/* Partner */}
-    {/*<div className="columns is-multiline" style={{ backgroundColor: "rgba(217,217,217,0.05)", margin: 0, padding: "0 20px 0 20px" }}>*/}
-    {/*  <PartnerRoll count={6} setIsShow={setIsShow} isShow={isShow} setModalData={setModalData}></PartnerRoll>*/}
-    {/*</div>*/}
-    {/* Sponser */}
-    {/*<div>*/}
-    {/*  <SponserRoll count={6} setIsShow={setIsShow} isShow={isShow} setModalData={setModalData}></SponserRoll>*/}
-    {/*</div>*/}
+    <div style={{ display: 'inline-block', width: '100%', height: '40px' }}>
+      <Button style={{ float: "right", marginTop: "16px", marginRight: "20px" }}>
+        더보기
+      </Button>
+    </div>
+    <div style={{ height: "40px" }}>
+      <Divider title={"Partner"}>
+      </Divider>
+    </div>
+    <div>
+      <SponserRoll count={6}>
+      </SponserRoll>
+    </div>
+    <div style={{ display: 'inline-block', width: '100%', height: '40px' }}>
+      <Button style={{ float: "right", marginTop: "16px", marginRight: "20px" }}>
+        더보기
+      </Button>
+    </div>
+    <div style={{ marginTop: '40px'}}>
+      <Footer/>
+    </div>
   </div>
 )
 

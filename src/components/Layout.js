@@ -1,11 +1,9 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
 import Navbar from './Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
-import Modal from './Modal'
 
 const TemplateWrapper = ({ children, isShow, setIsShow, modalData }) => {
   const { title, description } = useSiteMetadata()

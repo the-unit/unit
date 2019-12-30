@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const CardInnerContainer = styled.div`
@@ -9,10 +10,6 @@ const CardInnerContainer = styled.div`
   border: solid 1px #eeeeee;
   background-color: #ffffff;
   //padding: 14px 16px 9px 16px;
-`;
-
-const ChildContainer = styled.div`
-  
 `
 
 const FlexContainer = styled.div`
@@ -20,12 +17,13 @@ const FlexContainer = styled.div`
 `
 
 const MainHeaderContainer = styled.div`
-  margin: 14px 16px 0 16px;
+  //margin: 16px;
 `
 
 const CardButtonContainer = styled(FlexContainer)`
   justify-content: flex-end;
-  margin-top: 5px;
+  margin-top: 7.9px;
+  margin-right: 16px;
 `
 
 const CardLargeBtn = styled.div`
@@ -50,7 +48,7 @@ const TitleContainer = styled.div`
 const DescriptionContainer = styled.div`
   width: 256px;
   height: 60px;
-  margin-top: 11px;
+  margin: 6.7px 16px 0 16px;
   font-size: 14px;
   font-weight: bold;
   color: #323434;
@@ -75,32 +73,40 @@ export default class CardContent extends React.Component {
   render() {
     return (
       <CardInnerContainer>
-        <ChildContainer>
           <MainHeaderContainer>
             <TitleContainer>
-              NEXTERS\
-              <span style={{ float: 'right', fontSize: '12px', color: 'rgba(0, 0, 0, 0.45)', marginTop: '2px' }}>
-                since 2015
+              <div style={{ display: 'inline-block', marginTop: '9px', marginLeft: '16px' }}>
+                {this.props.frontmatter.name}
+              </div>
+              <span style={{ display: "inline-block", float: "right", fontSize: "12px", color: "rgba(0, 0, 0, 0.45)", marginTop: '13px', marginRight: '16px' }}>
+                since {this.props.frontmatter.establishmentYear}
               </span>
             </TitleContainer>
             <DescriptionContainer>
-              asdasdasdasdasdasdjkldsfjklsdjfklsdjfklsdjklfjsdklsdifgjfidghjiodfghudfhguifdhgiudfghuidfghdfiuh
+              {this.props.frontmatter.introduction}
             </DescriptionContainer>
+            <CardButtonContainer>
+              <CardLargeBtn>
+                웹페이지
+              </CardLargeBtn>
+              <CardSmallBtn>
+                f
+              </CardSmallBtn>
+              <CardSmallBtn>
+                m
+              </CardSmallBtn>
+            </CardButtonContainer>
           </MainHeaderContainer>
-          <CardButtonContainer style={{ marginRight: '5px' }}>
-            <CardLargeBtn>
-              웹페이지
-            </CardLargeBtn>
-            <CardSmallBtn>
-              f
-            </CardSmallBtn>
-            <CardSmallBtn>
-              m
-            </CardSmallBtn>
-          </CardButtonContainer>
-        </ChildContainer>
       </CardInnerContainer>
     )
   }
 }
 
+CardContent.propTypes = {
+  frontmatter: PropTypes.shape({
+    name: PropTypes.string,
+    establishmentYear: PropTypes.number,
+    introduction: PropTypes.string,
+    homepage: PropTypes.string,
+  }),
+}

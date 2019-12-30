@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import Card from "./Card"
 
 const ALL_COUNT = Number.MAX_VALUE;
 
@@ -9,49 +10,19 @@ class SponserRoll extends React.Component {
   render() {
     const { data, count, setIsShow, setModalData } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
+    console.log(posts);
 
     return (
-      <div className="columns is-multiline">
+      <div className="columns is-desktop is-multiline is-marginless">
         {posts &&
-          posts.map(({ node: post }, idx) => {
-            if (idx < count)
-              return (
-                <div className="is-parent column is-4-desktop is-6-mobile" key={post.id}>
-                  <article
-                    className={`blog-list-item tile is-child box notification`}
-                  >
-                    <header>
-                      {post.frontmatter.logo ? (
-                        <div className="featured-thumbnail">
-                          <PreviewCompatibleImage
-                            imageInfo={{
-                              image: post.frontmatter.logo,
-                              alt: `featured image thumbnail for post ${post.name}`
-                            }}
-                          />
-                        </div>
-                      ) : null}
-                      <a className="post-meta" onClick={() => {setIsShow(true); setModalData(post.frontmatter);}}>
-                          {post.frontmatter.name}
-                        <span> &bull; </span>
-                        <span className="subtitle is-size-5 is-block">
-                          {post.frontmatter.date}
-                        </span>
-                      </a>
-                    </header>
-                    <span>
-                      {post.excerpt}
-                      <br />
-                      <br />
-                    </span>
-                    <div className="button" onClick={() => {setIsShow(true); setModalData(post.frontmatter);}}>
-                      웹페이지
-                    </div>
-                  </article>
-                </div>
-              );
-            else return false;
-          })}
+        posts.map(({ node: post }, idx) => {
+          if (idx < count)
+            return (
+              <Card key={"sponserCard"+idx} {...post} >
+              </Card>
+            );
+          else return false;
+        })}
       </div>
     );
   }

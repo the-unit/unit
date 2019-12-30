@@ -19,7 +19,7 @@ class PartnerRoll extends React.Component {
           posts.map(({ node: post }, idx) => {
             if (idx < count)
               return (
-                  <Card key={"partnerCard"+idx}>
+                  <Card key={"partnerCard"+idx} {...post} >
                   </Card>
               );
             else return false;

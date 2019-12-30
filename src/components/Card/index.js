@@ -11,7 +11,7 @@ const Card = class extends React.Component {
   render() {
     return (
       <CardContainer className="column is-4 is-paddingless" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <CardContent>
+        <CardContent {...this.props}>
         </CardContent>
       </CardContainer>
     )
