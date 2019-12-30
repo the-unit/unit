@@ -50,7 +50,7 @@ const DescriptionContainer = styled.div`
   height: 60px;
   margin: 6.7px 16px 0 16px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   color: #323434;
   word-wrap: break-word;
   overflow: hidden;
@@ -78,7 +78,7 @@ export default class CardContent extends React.Component {
               <div style={{ display: 'inline-block', marginTop: '9px', marginLeft: '16px' }}>
                 {this.props.frontmatter.name}
               </div>
-              <span style={{ display: "inline-block", float: "right", fontSize: "12px", color: "rgba(0, 0, 0, 0.45)", marginTop: '13px', marginRight: '16px' }}>
+              <span style={{ display: "inline-block", float: "right", fontSize: "12px", color: "rgba(0, 0, 0, 0.45)", marginTop: '13px', marginRight: '16px', fontWeight: 500 }}>
                 since {this.props.frontmatter.establishmentYear}
               </span>
             </TitleContainer>
