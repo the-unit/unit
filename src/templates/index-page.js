@@ -24,7 +24,7 @@ export const IndexPageTemplate = ({
   <div style={{ display: 'block' }}>
     <div
       style={{
-        width: `${document.body.clientWidth}`,
+        width: `100%`,
         backgroundRepeat: "no-repeat",
         height: `${window.innerHeight / 3}px`,
         backgroundPosition: "center",
