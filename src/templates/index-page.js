@@ -26,7 +26,7 @@ export const IndexPageTemplate = ({
       style={{
         width: `100%`,
         backgroundRepeat: "no-repeat",
-        height: `${window.innerHeight / 3}px`,
+        height: `${(typeof window !== 'undefined' && window.innerHeight / 3) || 360}px`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundImage: `url(${
