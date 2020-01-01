@@ -21,7 +21,7 @@ collections:
           - {label: FirstEvent, name: firstEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
           - {label: SecondEvent, name: secondEvent,   widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
           - {label: ThirdEvent, name: thirdEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
-  - name: "partners"
+  - name: "partner"
     label: "Partners"
     folder: "src/pages/partner"
     create: true
