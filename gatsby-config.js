@@ -6,9 +6,9 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Unit',
+    title: 'UNIT',
     description:
-      'Unit Page',
+      'UNIT PAGE',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

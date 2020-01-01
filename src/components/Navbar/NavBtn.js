@@ -11,6 +11,9 @@ export const NavBtnContainer = styled.div`
   color: white;
   font-weight: bold;
   text-decoration: none;
+  &:hover {
+    background-color: #00A118 
+  }
 `
 
 export const NavBtn = (props) => (

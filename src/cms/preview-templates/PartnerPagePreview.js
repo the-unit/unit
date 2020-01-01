@@ -2,14 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import { PartnerPostTemplate } from "../../templates/partner-post"
 
-const PartnerPostPreview = ({ entry, widgetFor }) => {
+const PartnerPostPreview = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS()
   if (data) {
-    return <PartnerPostTemplate post={data}/>
+    return <PartnerPostTemplate frontmatter={data}/>
   } else {
     return <div>Loading ...</div>
   }
 }
+
 PartnerPostPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,

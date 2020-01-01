@@ -21,6 +21,7 @@ export const IndexPageTemplate = ({
                                     isShow,
                                     setModalData,
                                   }) => (
+
   <div style={{ display: 'block' }}>
     <div
       style={{
@@ -130,7 +131,7 @@ export const IndexPageTemplate = ({
       </Button>
     </div>
     <div style={{ height: "40px" }}>
-      <Divider title={"Partner"}>
+      <Divider title={"Sponser"}>
       </Divider>
     </div>
     <div>

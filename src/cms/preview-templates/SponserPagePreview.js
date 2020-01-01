@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { SponserPostTemplate } from '../../templates/sponser-post'
+import React from "react"
+import PropTypes from "prop-types"
+import { SponserPostTemplate } from "../../templates/sponser-post"
 
-const SponserPostPreview = ({ entry, widgetFor }) => {
-  const data = entry.getIn(['data']).toJS()
+const SponserPostPreview = ({ entry }) => {
+  const data = entry.getIn(["data"]).toJS()
   if (data) {
-    return <SponserPostTemplate  post={data}/>
+    return <SponserPostTemplate frontmatter={data}/>
   } else {
     return <div>Loading ...</div>
   }
