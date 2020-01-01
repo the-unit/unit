@@ -6,52 +6,15 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-export const SponserPostTemplate = ({
-                                      content,
-                                      contentComponent,
-                                      description,
-                                      tags,
-                                      title,
-                                      helmet
-                                    }) => {
-  const SponserContent = contentComponent || Content;
-
+export const SponserPostTemplate = () => {
   return (
-    <section className="section">
-      {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <SponserContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
-        </div>
-      </div>
-    </section>
+    <div>
+
+    </div>
   );
 };
 
 SponserPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object
 };
 
 const SponserPost = ({ data }) => {
@@ -59,22 +22,6 @@ const SponserPost = ({ data }) => {
 
   return (
     <Layout>
-      <SponserPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Sponser">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
     </Layout>
   );
 };
@@ -95,7 +42,6 @@ export const pageQuery = graphql`
             frontmatter {
                 date(formatString: "MMMM DD, YYYY")
                 title
-                description
                 tags
             }
         }

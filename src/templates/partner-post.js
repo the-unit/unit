@@ -1,103 +1,78 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import React from "react"
+import PropTypes from "prop-types"
+import { kebabCase } from "lodash"
+import Helmet from "react-helmet"
+import { graphql, Link } from "gatsby"
+import Layout from "../components/Layout"
 
-export const PartnerPostTemplate = ({
-                                      content,
-                                      contentComponent,
-                                      description,
-                                      tags,
-                                      title,
-                                      helmet
-                                    }) => {
-  const PartnerContent = contentComponent || Content;
+import Card from "../components/Card"
 
+export const PartnerPostTemplate = (post) => {
   return (
-    <section className="section">
-      {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PartnerContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+    <Card {...post} >
+    </Card>
+  )
+}
 
 PartnerPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object
-};
+
+}
 
 const PartnerPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <Layout>
       <PartnerPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Partner">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        name={post.frontmatter.name}
+        subName={post.frontmatter.subName}
+        establishmentYear={post.frontmatter.establishmentYear}
+        slogan={post.frontmatter.slogan}
+        introduction={post.frontmatter.introduction}
+        location={post.frontmatter.location}
+        email={post.frontmatter.email}
+        homepage={post.frontmatter.homepage}
+        date={post.frontmatter.date}
+        logo={post.frontmatter.logo}
       />
     </Layout>
-  );
-};
+  )
+}
 
 PartnerPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object
-  })
-};
+    markdownRemark: PropTypes.object,
+  }),
+}
 
-export default PartnerPost;
+export default PartnerPost
 
 export const pageQuery = graphql`
     query PartnerPostByID($id: String!) {
         markdownRemark(id: { eq: $id }) {
             id
-            html
+            fields {
+                slug
+            }
             frontmatter {
+                name
+                subName
+                establishmentYear
+                slogan
+                introduction
+                location
+                email
+                homepage
+                templateKey
                 date(formatString: "MMMM DD, YYYY")
-                title
-                description
-                tags
+                logo {
+                    childImageSharp {
+                        fluid(maxWidth: 120, quality: 100) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
             }
         }
     }
-`;
+`
