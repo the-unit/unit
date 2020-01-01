@@ -180,7 +180,6 @@ IndexPageTemplate.propTypes = {
 }
 
 const IndexPage = ({ data }) => {
-  console.log("data is", data)
   const indexFrontmatter = data.index.frontmatter
   const sponserList = data.sponser.edges
   const partnerList = data.partner.edges
@@ -196,7 +195,6 @@ const IndexPage = ({ data }) => {
     logo: "",
     dept: "",
   })
-  console.log("modalData is", modalData)
 
   return (
     <Layout isShow={isShow} setIsShow={setIsShow} modalData={modalData}>

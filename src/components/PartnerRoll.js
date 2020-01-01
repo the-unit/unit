@@ -11,7 +11,6 @@ class PartnerRoll extends React.Component {
   render() {
     const { data, count, setIsShow, setModalData } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    console.log(posts);
 
     return (
       <div className="columns is-desktop is-multiline is-marginless">

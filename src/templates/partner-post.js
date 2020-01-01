@@ -7,34 +7,21 @@ import Layout from "../components/Layout"
 
 import Card from "../components/Card"
 
-export const PartnerPostTemplate = (post) => {
+export const PartnerPostTemplate = ({ post }) => {
   return (
     <Card {...post} >
     </Card>
   )
 }
 
-PartnerPostTemplate.propTypes = {
-
-}
+PartnerPostTemplate.propTypes = {}
 
 const PartnerPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <PartnerPostTemplate
-        name={post.frontmatter.name}
-        subName={post.frontmatter.subName}
-        establishmentYear={post.frontmatter.establishmentYear}
-        slogan={post.frontmatter.slogan}
-        introduction={post.frontmatter.introduction}
-        location={post.frontmatter.location}
-        email={post.frontmatter.email}
-        homepage={post.frontmatter.homepage}
-        date={post.frontmatter.date}
-        logo={post.frontmatter.logo}
-      />
+      <PartnerPostTemplate post={post}> </PartnerPostTemplate>
     </Layout>
   )
 }
