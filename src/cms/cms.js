@@ -11,4 +11,4 @@ CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('partner', PartnerPagePreview)
-CMS.registerPreviewTemplate('sponser', SponserPagePreview)
+// CMS.registerPreviewTemplate('sponser', SponserPagePreview)
