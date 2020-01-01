@@ -2,20 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { SponserPostTemplate } from '../../templates/sponser-post'
 
-const SponserPostPreview = ({ entry, widgetFor }) => (
-  <SponserPostTemplate
-    content={widgetFor('body')}
-    description={entry.getIn(['data', 'description'])}
-    tags={entry.getIn(['data', 'tags'])}
-    title={entry.getIn(['data', 'title'])}
-  />
-)
+const SponserPostPreview = ({ entry, widgetFor }) => {
+  const data = entry.getIn(['data']).toJS()
+  if (data) {
+    return <SponserPostTemplate  post={data}/>
+  } else {
+    return <div>Loading ...</div>
+  }
+}
 
 SponserPostPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
-  widgetFor: PropTypes.func,
+  getAsset: PropTypes.func,
 }
 
 export default SponserPostPreview
