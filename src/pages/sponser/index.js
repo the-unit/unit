@@ -1,9 +1,9 @@
 import React from "react";
 
 import Layout from "../../components/Layout";
-import SponserRoll from "../../components/SponserRoll";
+import SponsorRoll from "../../components/SponsorRoll";
 
-export default class SponserIndexPage extends React.Component {
+export default class SponsorIndexPage extends React.Component {
   render() {
     return (
       <Layout>
@@ -22,13 +22,13 @@ export default class SponserIndexPage extends React.Component {
               padding: "1rem"
             }}
           >
-            Sponser List
+            Sponsor List
           </h1>
         </div>
         <section className="section section-bg-color">
           <div className="container">
             <div className="content">
-              <SponserRoll count={6}/>
+              <SponsorRoll count={6}/>
             </div>
           </div>
         </section>

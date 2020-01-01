@@ -7,7 +7,7 @@ import Card from "../components/Card"
 import StyleInjector from "../components/StyleInjector"
 
 
-export const SponserPostTemplate = ({ frontmatter }) => {
+export const SponsorPostTemplate = ({ frontmatter }) => {
   return (
     <StyleInjector>
       <Card frontmatter={frontmatter} >
@@ -16,28 +16,28 @@ export const SponserPostTemplate = ({ frontmatter }) => {
   )
 }
 
-SponserPostTemplate.propTypes = {}
+SponsorPostTemplate.propTypes = {}
 
-const SponserPost = ({ data }) => {
+const SponsorPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <SponserPostTemplate post={post}> </SponserPostTemplate>
+      <SponsorPostTemplate post={post}> </SponsorPostTemplate>
     </Layout>
   )
 }
 
-SponserPost.propTypes = {
+SponsorPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default SponserPost
+export default SponsorPost
 
 export const pageQuery = graphql`
-    query SponserPostByID($id: String!) {
+    query SponsorPostByID($id: String!) {
         markdownRemark(id: { eq: $id }) {
             excerpt(pruneLength: 400)
             id

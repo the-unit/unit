@@ -1,5 +1,5 @@
 ---
-templateKey: sponser-post
+templateKey: sponsor-post
 date: 2016-12-17T15:04:10.000Z
 name: Depromeet
 subName: 서브네임 1

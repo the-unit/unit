@@ -37,13 +37,13 @@ collections:
       - {label: Email, name: email, widget: string}
       - {label: Homepage, name: homepage, widget: string}
       - {label: Logo, name: logo, widget: image}
-  - name: "sponser"
-    label: "Sponsers"
-    folder: "src/pages/sponser"
+  - name: "sponsor"
+    label: "Sponsors"
+    folder: "src/pages/sponsor"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sponser-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sponsor-post"}
       - {label: Name, name: name, widget: string}
       - {label: SubName, name: subName, widget: string}
       - {label: Department, name: dept, widget: string}

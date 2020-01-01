@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 import Button from "../components/Button"
-import SponserRoll from "../components/SponserRoll"
+import SponsorRoll from "../components/SponsorRoll"
 import Divider from "../components/Divider"
 import PartnerRoll from "../components/PartnerRoll"
 import Footer from "../components/Footer"
@@ -131,12 +131,12 @@ export const IndexPageTemplate = ({
       </Button>
     </div>
     <div style={{ height: "40px" }}>
-      <Divider title={"Sponser"}>
+      <Divider title={"Sponsor"}>
       </Divider>
     </div>
     <div>
-      <SponserRoll count={6}>
-      </SponserRoll>
+      <SponsorRoll count={6}>
+      </SponsorRoll>
     </div>
     <div style={{ display: 'inline-block', width: '100%', height: '40px' }}>
       <Button style={{ float: "right", marginTop: "16px", marginRight: "20px" }}>
@@ -182,7 +182,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const indexFrontmatter = data.index.frontmatter
-  const sponserList = data.sponser.edges
+  const sponsorList = data.sponsor.edges
   const partnerList = data.partner.edges
   const [isShow, setIsShow] = useState(false)
   const [modalData, setModalData] = useState({
@@ -209,7 +209,7 @@ const IndexPage = ({ data }) => {
         thirdEvent={indexFrontmatter.thirdEvent}
         description={indexFrontmatter.description}
         intro={indexFrontmatter.intro}
-        sponserList={sponserList}
+        sponsorList={sponsorList}
         partnerList={partnerList}
         setIsShow={setIsShow}
         isShow={isShow}
@@ -290,8 +290,8 @@ export const pageQuery = graphql`
                 }
             }
         }
-        sponser: allMarkdownRemark(
-            filter: { frontmatter: { templateKey: { eq: "sponser-post" } } }
+        sponsor: allMarkdownRemark(
+            filter: { frontmatter: { templateKey: { eq: "sponsor-post" } } }
             limit: 6
         ) {
             edges {

@@ -20,8 +20,8 @@ const Index = class extends React.Component {
           <NavBtn to="/partner">
             Partner
           </NavBtn>
-          <NavBtn to="/sponser">
-            Sponser
+          <NavBtn to="/sponsor">
+            Sponsor
           </NavBtn>
           <NavBtn to="/contact">
             Contact

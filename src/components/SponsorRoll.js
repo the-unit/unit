@@ -6,7 +6,7 @@ import Card from "./Card"
 
 const ALL_COUNT = Number.MAX_VALUE;
 
-class SponserRoll extends React.Component {
+class SponsorRoll extends React.Component {
   render() {
     const { data, count, setIsShow, setModalData } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
@@ -17,7 +17,7 @@ class SponserRoll extends React.Component {
         posts.map(({ node: post }, idx) => {
           if (idx < count)
             return (
-              <Card key={"sponserCard"+idx} {...post} >
+              <Card key={"sponsorCard"+idx} {...post} >
               </Card>
             );
           else return false;
@@ -27,7 +27,7 @@ class SponserRoll extends React.Component {
   }
 }
 
-SponserRoll.propTypes = {
+SponsorRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array
@@ -39,10 +39,10 @@ SponserRoll.propTypes = {
 export default ({ count, setIsShow, setModalData }) => (
   <StaticQuery
     query={graphql`
-      query SponserRollQuery {
+      query SponsorRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "sponser-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "sponsor-post" } } }
         ) {
           edges {
             node {
@@ -76,6 +76,6 @@ export default ({ count, setIsShow, setModalData }) => (
         }
       }
     `}
-    render={data => <SponserRoll data={data} count={count || ALL_COUNT} setIsShow={setIsShow} setModalData={setModalData} />}
+    render={data => <SponsorRoll data={data} count={count || ALL_COUNT} setIsShow={setIsShow} setModalData={setModalData} />}
   />
 );
