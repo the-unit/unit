@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const CardInnerContainer = styled.div`
   width: 288px;
-  height: 144px;
+  //height: 144px;
   object-fit: contain;
   border-radius: 8px;
   border: solid 1px #eeeeee;
@@ -17,17 +17,17 @@ const FlexContainer = styled.div`
 `
 
 const MainHeaderContainer = styled.div`
-  //margin: 16px;
 `
 
 const CardButtonContainer = styled(FlexContainer)`
   justify-content: flex-end;
-  margin-top: 7.9px;
+  margin-top: 16px;
   margin-right: 16px;
 `
 
 const CardLargeBtn = styled.div`
   margin-left: 4px;
+  margin-bottom: 16px;
   width: 72px;
   border-radius: 15px;
   border: solid 1px #979797;
@@ -48,7 +48,7 @@ const TitleContainer = styled.div`
 const DescriptionContainer = styled.div`
   width: 256px;
   height: 60px;
-  margin: 6.7px 16px 0 16px;
+  margin: 7px 16px 0 16px;
   font-size: 14px;
   font-weight: 500;
   color: #323434;
@@ -56,11 +56,8 @@ const DescriptionContainer = styled.div`
   overflow: hidden;
 `
 
-const DateContainer = styled.div`
-
-`
-
 const CardSmallBtn = styled(CardLargeBtn)`
+  margin-bottom: 16px;
   width: 32px;
 `
 
