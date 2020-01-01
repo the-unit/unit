@@ -4,13 +4,13 @@ import { StyleSheetManager } from "styled-components"
 
 const StyleInjector = ({ children }) => {
   const iframe = typeof document !== "undefined" && document.getElementsByTagName("iframe")[0]
-  const iframeHeaderElm = typeof iframe !== "undefined" && iframe.contentDocument && iframe.contentDocument.head
-  if (iframeHeaderElm) {
+  const iframeHeaderElm = iframe && iframe.contentDocument.head
+  if (iframe) {
     return (<StyleSheetManager target={iframeHeaderElm}>
       {children}
     </StyleSheetManager>)
   } else {
-    return (<>{children}</>)
+    return (<div>{children}</div>)
   }
 }
 
