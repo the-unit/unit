@@ -76,14 +76,14 @@ export default class CardContent extends React.Component {
           <MainHeaderContainer>
             <TitleContainer>
               <div style={{ display: 'inline-block', marginTop: '9px', marginLeft: '16px' }}>
-                {this.props.frontmatter.name}
+                {this.props.frontmatter && this.props.frontmatter.name}
               </div>
               <span style={{ display: "inline-block", float: "right", fontSize: "12px", color: "rgba(0, 0, 0, 0.45)", marginTop: '13px', marginRight: '16px', fontWeight: 500 }}>
-                since {this.props.frontmatter.establishmentYear}
+                since {this.props.frontmatter && this.props.frontmatter.establishmentYear}
               </span>
             </TitleContainer>
             <DescriptionContainer>
-              {this.props.frontmatter.introduction}
+              {this.props.frontmatter && this.props.frontmatter.introduction}
             </DescriptionContainer>
             <CardButtonContainer>
               <CardLargeBtn>

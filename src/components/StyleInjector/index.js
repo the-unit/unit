@@ -3,14 +3,15 @@ import PropTypes from "prop-types"
 import { StyleSheetManager } from "styled-components"
 
 const StyleInjector = ({ children }) => {
-  const iframe = document.getElementsByTagName("iframe")[0]
-  const iframeHeadElem = iframe.contentDocument.head
-
-  return (
-    <StyleSheetManager target={iframeHeadElem}>
+  const iframe = typeof document !== "undefined" && document.getElementsByTagName("iframe")[0]
+  const iframeHeaderElm = typeof iframe !== "undefined" && iframe.contentDocument && iframe.contentDocument.head
+  if (iframeHeaderElm) {
+    return (<StyleSheetManager target={iframeHeaderElm}>
       {children}
-    </StyleSheetManager>
-  )
+    </StyleSheetManager>)
+  } else {
+    return (<>{children}</>)
+  }
 }
 
-export default StyleInjector;
+export default StyleInjector
