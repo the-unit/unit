@@ -31,13 +31,13 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-post"}
       - {label: Name, name: name, widget: string}
       - {label: SubName, name: subName, widget: string, required: false}
-      - {label: EstablishmentYear, name: establishmentYear, widget: number, required: false}
+      - {label: EstablishmentYear, name: establishmentYear, widget: number, required: false, default: 0}
       - {label: Slogan, name: slogan, widget: string, required: false}
       - {label: Introduction, name: introduction, widget: string, required: false}
       - {label: Location, name: location, widget: string, required: false}
       - {label: Email, name: email, widget: string, required: false}
       - {label: Homepage, name: homepage, widget: string, required: false}
-      - {label: Tags, name: tags, widget: string, required: false}
+      - {label: "Tags", name: "tags", widget: "list"}
       - {label: Logo, name: logo, widget: image, required: false}
   - name: "sponsor"
     label: "Sponsors"
@@ -50,11 +50,11 @@ collections:
       - {label: Name, name: name, widget: string}
       - {label: SubName, name: subName, widget: string, required: false}
       - {label: Department, name: dept, widget: string, required: false}
-      - {label: EstablishmentYear, name: establishmentYear, widget: number, required: false}
+      - {label: EstablishmentYear, name: establishmentYear, widget: number, required: false, default: "index-page"}
       - {label: Slogan, name: slogan, widget: string, required: false}
       - {label: Introduction, name: introduction, widget: string, required: false}
       - {label: Location, name: location, widget: string, required: false}
       - {label: Email, name: email, widget: string, required: false}
       - {label: Homepage, name: homepage, widget: string, required: false}
-      - {label: Tags, name: tags, widget: string, required: false}
+      - {label: "Tags", name: "tags", widget: "list"}
       - {label: Logo, name: logo, widget: image, required: false}

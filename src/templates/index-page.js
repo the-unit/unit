@@ -188,7 +188,7 @@ const IndexPage = ({ data }) => {
   const [modalData, setModalData] = useState({
     name: "",
     subName: "",
-    establishmentYear: "",
+    establishmentYear: undefined,
     slogan: "",
     introduction: "",
     location: "",
