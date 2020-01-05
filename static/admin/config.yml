@@ -30,14 +30,14 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-post"}
       - {label: Name, name: name, widget: string}
-      - {label: SubName, name: subName, widget: string}
-      - {label: EstablishmentYear, name: establishmentYear, widget: number}
-      - {label: Slogan, name: slogan, widget: string}
-      - {label: Introduction, name: introduction, widget: string}
-      - {label: Location, name: location, widget: string}
-      - {label: Email, name: email, widget: string}
-      - {label: Homepage, name: homepage, widget: string}
-      - {label: Logo, name: logo, widget: image}
+      - {label: SubName, name: subName, widget: string, required: false}
+      - {label: EstablishmentYear, name: establishmentYear, widget: number, required: false}
+      - {label: Slogan, name: slogan, widget: string, required: false}
+      - {label: Introduction, name: introduction, widget: string, required: false}
+      - {label: Location, name: location, widget: string, required: false}
+      - {label: Email, name: email, widget: string, required: false}
+      - {label: Homepage, name: homepage, widget: string, required: false}
+      - {label: Logo, name: logo, widget: image, required: false}
   - name: "sponsor"
     label: "Sponsors"
     folder: "src/pages/sponsor"
@@ -47,12 +47,12 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sponsor-post"}
       - {label: Name, name: name, widget: string}
-      - {label: SubName, name: subName, widget: string}
-      - {label: Department, name: dept, widget: string}
-      - {label: EstablishmentYear, name: establishmentYear, widget: number}
-      - {label: Slogan, name: slogan, widget: string}
-      - {label: Introduction, name: introduction, widget: string}
-      - {label: Location, name: location, widget: string}
-      - {label: Email, name: email, widget: string}
-      - {label: Homepage, name: homepage, widget: string}
-      - {label: Logo, name: logo, widget: image}
+      - {label: SubName, name: subName, widget: string, required: false}
+      - {label: Department, name: dept, widget: string, required: false}
+      - {label: EstablishmentYear, name: establishmentYear, widget: number, required: false}
+      - {label: Slogan, name: slogan, widget: string, required: false}
+      - {label: Introduction, name: introduction, widget: string, required: false}
+      - {label: Location, name: location, widget: string, required: false}
+      - {label: Email, name: email, widget: string, required: false}
+      - {label: Homepage, name: homepage, widget: string, required: false}
+      - {label: Logo, name: logo, widget: image, required: false}
