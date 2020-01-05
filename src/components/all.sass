@@ -1,9 +1,17 @@
 @import "~bulma/sass/utilities/initial-variables"
 
+// ovresponsiveness variable
+$mobile: 639px
+$tablet: 640px
+$desktop: 1024px
+
 @import "~bulma"
 
 body
   margin: 0
   font-family: "Noto Sans KR"
 
-// responsiveness
+.event
+  @media screen and (min-width: 960px)
+    display: inline-block
+    width: 33.3%

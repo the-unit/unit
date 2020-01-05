@@ -13,7 +13,7 @@ class PartnerRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="columns is-desktop is-multiline is-marginless">
+      <div className="columns is-multiline is-marginless is-vcentered">
         {posts &&
           posts.map(({ node: post }, idx) => {
             if (idx < count)

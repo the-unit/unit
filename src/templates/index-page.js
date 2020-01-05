@@ -98,10 +98,10 @@ export const IndexPageTemplate = ({
     </div>
     <div style={{ height: "40px", backgroundColor: "rgba(217,217,217,0.05)" }}>
     </div>
-    <div className="columns is-desktop is-marginless">
+    <div>
       {[firstEvent, secondEvent, thirdEvent].map((evt, idx) => {
         return (
-          <div className="column is-paddingless"
+          <div className="event"
                style={{ height: "120px", backgroundColor: "rgba(217,217,217,0.05)", textAlign: "center" }}
                key={`evt-${idx}`}>
             <span style={{ fontSize: "16px", fontWeight: "bold", color: "#186f25" }}>

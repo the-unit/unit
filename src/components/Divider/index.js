@@ -4,7 +4,7 @@ import styled from "styled-components"
 const DividerContainer = styled.div`
   display: flex;
   padding-left: 30px;
-  width: 960px;
+  //width: 960px;
   height: 40px;
   background-color: #ffffff;
   align-items: center;

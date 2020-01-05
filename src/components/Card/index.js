@@ -10,7 +10,7 @@ const Card = class extends React.Component {
 
   render() {
     return (
-      <CardContainer className="column is-4 is-paddingless" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <CardContainer className="is-half-tablet is-one-third-desktop is-12-mobile is-paddingless">
         <CardContent {...this.props}>
         </CardContent>
       </CardContainer>
