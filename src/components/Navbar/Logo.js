@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby";
 import styled from "styled-components"
-import logo_white from "../../../static/img/logo_white.png";
+
 
 const LogoContainer = styled.div`
   margin-left: 15px;

@@ -147,9 +147,6 @@ export const IndexPageTemplate = ({
         </Button>
       </Link>
     </div>
-    <div style={{ marginTop: '25px'}}>
-      <Footer/>
-    </div>
   </div>
 )
 

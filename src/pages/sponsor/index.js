@@ -13,20 +13,20 @@ export default class SponsorIndexPage extends React.Component {
         <div
           className="margin-top-0"
           style={{
-            height: '240px',
+            height: "240px",
             backgroundColor: "#00a118",
             color: "white",
           }}
         >
           <div style={{
-            paddingTop: '48px',
-            paddingLeft: '48px'
+            paddingTop: "48px",
+            paddingLeft: "48px",
           }}>
             <DetailTitleContainer>
               Sponsor
             </DetailTitleContainer>
             <DetailContent style={{
-              paddingTop: '43px'
+              paddingTop: "43px",
             }}>
               <div>
                 IT 단체들의 성장을 돕는 기업, 기관들을 소개합니다.
@@ -40,14 +40,15 @@ export default class SponsorIndexPage extends React.Component {
             </DetailContent>
           </div>
         </div>
-        <section className="section section-bg-color is-paddingless">
+        <section className="section section-bg-color is-paddingless" style={{
+          marginBottom: "50px",
+        }}>
           <div className="container">
             <div className="content">
               <SponsorRoll/>
             </div>
           </div>
         </section>
-        <Footer/>
       </Layout>
     )
   }

@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import Footer from "./Footer"
 
 const TemplateWrapper = ({ children, isShow, setIsShow, modalData }) => {
   const { title, description } = useSiteMetadata()
@@ -49,7 +50,9 @@ const TemplateWrapper = ({ children, isShow, setIsShow, modalData }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-      {/*<Footer />*/}
+      <div style={{ marginTop: '25px' }}>
+        <Footer />
+      </div>
       {/*<Modal isShow={isShow} setIsShow={setIsShow} modalData={modalData}></Modal>*/}
     </div>
   )
