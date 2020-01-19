@@ -92,7 +92,7 @@ export default class CardContent extends React.Component {
             {this.props.frontmatter && this.props.frontmatter.introduction}
           </DescriptionContainer>
           <CardButtonContainer>
-            {this.props.frontmatter.homepage ? (
+            {this.props.frontmatter && this.props.frontmatter.homepage ? (
                 <CardLargeBtn href={this.props.frontmatter.homepage} target="_blank">
                     웹페이지
                 </CardLargeBtn>

@@ -9,7 +9,7 @@ export const NavBtn = (props) => (
         backgroundColor: (location.pathname === props.to)? '#00a118' : '#186f25',
         height: '60px'
       }}>
-        <Link to={props.to} className="navbar-item">
+        <Link to={props.to} className="navbar-item" activeClassName={"hoverNavBtn"}>
             <span style={{ textAlign: "center", width: "100%"}}>
               {props.children}
             </span>
