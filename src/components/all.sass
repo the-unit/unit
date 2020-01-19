@@ -11,8 +11,14 @@ body
   margin: 0
   font-family: "Noto Sans KR"
 
+*:focus
+  outline: none
+
 .navbar, .navbar-menu
   background-color: #186f25 !important
+
+.navbar-burger:hover
+  background-color: transparent
 
 .navbar-item
   width: 90px
@@ -26,9 +32,12 @@ body
   color: white !important
   height: 100%
 
-.hoverNavBtn
-  //background-color: #186f25
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover,
+a.navbar-item.is-active
   color: white
+  background-color: #00a118
 
 .event
   @media screen and (min-width: 960px)
@@ -48,3 +57,7 @@ body
 .no-grow-on-mobile
   @media screen and (max-width: $desktop)
     flex-grow: 0
+
+.mobile-full-width
+  @media screen and (max-width: $desktop)
+    width: 100%

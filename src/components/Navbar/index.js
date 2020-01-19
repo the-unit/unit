@@ -36,10 +36,12 @@ const Index = class extends React.Component {
   render() {
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation" style={{ height: '60px' }}>
-        <div className="navbar-brand" style={{ height: '100%' }}>
-          <Link className="navbar-item" to="/">
-            <img src={logo_white} alt={'logo'}/>
-          </Link>
+        <div className="navbar-brand" style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
+            <Link to="/">
+              <div style={{ width: '90px', marginLeft: '15px' }}>
+                <img src={logo_white} alt={'logo'}/>
+              </div>
+            </Link>
           <a role="button" className={`navbar-burger burger ${this.state.navBarActiveClass}`} aria-label="menu" aria-expanded="false"
              data-target="navbarTarget" onClick={() => this.toggleHamburger()}>
             <span aria-hidden="true"/>
@@ -47,7 +49,7 @@ const Index = class extends React.Component {
             <span aria-hidden="true"/>
           </a>
         </div>
-        <div id="navbarTarget" className={`navbar-menu ${this.state.navBarActiveClass}`}>
+        <div id="navbarTarget" className={`navbar-menu is-paddingless ${this.state.navBarActiveClass}`}>
           <div className="navbar-start" style={{ flexGrow: 1 }}>
           </div>
           <div className="navbar-end">

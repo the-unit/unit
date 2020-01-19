@@ -4,7 +4,7 @@ import Layout from "../../components/Layout"
 import SponsorRoll from "../../components/SponsorRoll"
 import DetailTitleContainer from "../../components/Detail/DetailTitleContainer"
 import DetailContent from "../../components/Detail/DetailContent"
-import Footer from "../../components/Footer"
+import SearchBar from "../../components/SearchBar"
 
 export default class SponsorIndexPage extends React.Component {
   render() {
@@ -43,6 +43,9 @@ export default class SponsorIndexPage extends React.Component {
         <section className="section section-bg-color is-paddingless" style={{
           marginBottom: "50px",
         }}>
+          <div style={{ display: "flex", height: "40px", alignItems: "center", justifyContent: "flex-end" }}>
+            <SearchBar/>
+          </div>
           <div className="container">
             <div className="content">
               <SponsorRoll/>

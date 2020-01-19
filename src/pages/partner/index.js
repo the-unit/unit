@@ -4,7 +4,7 @@ import Layout from "../../components/Layout"
 import PartnerRoll from "../../components/PartnerRoll"
 import DetailTitleContainer from "../../components/Detail/DetailTitleContainer"
 import DetailContent from "../../components/Detail/DetailContent"
-import Footer from "../../components/Footer"
+import SearchBar from "../../components/SearchBar"
 
 
 export default class PartnerIndexPage extends React.Component {
@@ -44,6 +44,9 @@ export default class PartnerIndexPage extends React.Component {
         <section className="section section-bg-color is-paddingless" style={{
           marginBottom: "50px",
         }}>
+          <div style={{ display: "flex", height: "40px", alignItems: "center", justifyContent: "flex-end" }}>
+            <SearchBar/>
+          </div>
           <div className="container">
             <div className="content">
               <PartnerRoll/>
