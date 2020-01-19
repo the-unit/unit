@@ -50,7 +50,7 @@ collections:
       - {label: Name, name: name, widget: string}
       - {label: SubName, name: subName, widget: string, required: false}
       - {label: Department, name: dept, widget: string, required: false}
-      - {label: EstablishmentYear, name: establishmentYear, widget: number, required: false, default: "index-page"}
+      - {label: EstablishmentYear, name: establishmentYear, widget: number, required: false, default: "number"}
       - {label: Slogan, name: slogan, widget: string, required: false}
       - {label: Introduction, name: introduction, widget: string, required: false}
       - {label: Location, name: location, widget: string, required: false}

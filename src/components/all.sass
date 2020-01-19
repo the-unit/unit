@@ -15,3 +15,17 @@ body
   @media screen and (min-width: 960px)
     display: inline-block
     width: 33.3%
+
+.hide-on-mobile
+  @media screen and (max-width: $desktop)
+    display: none
+
+.minimize-on-mobile
+  @media screen and (max-width: $desktop)
+    height: 90px
+    display: flex
+    flex-direction: column
+
+.no-grow-on-mobile
+  @media screen and (max-width: $desktop)
+    flex-grow: 0

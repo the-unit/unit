@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 import Layout from "../components/Layout"
 import Button from "../components/Button"
@@ -126,9 +126,11 @@ export const IndexPageTemplate = ({
       </PartnerRoll>
     </div>
     <div style={{ display: 'inline-block', width: '100%', height: '40px' }}>
-      <Button style={{ float: "right", marginTop: "16px", marginRight: "20px" }}>
-        더보기
-      </Button>
+      <Link to={'/partner'}>
+        <Button style={{ float: "right", marginTop: "16px", marginRight: "20px" }}>
+            더보기
+        </Button>
+      </Link>
     </div>
     <div style={{ height: "40px" }}>
       <Divider title={"Sponsor"}>
@@ -139,11 +141,13 @@ export const IndexPageTemplate = ({
       </SponsorRoll>
     </div>
     <div style={{ display: 'inline-block', width: '100%', height: '40px' }}>
-      <Button style={{ float: "right", marginTop: "16px", marginRight: "20px" }}>
-        더보기
-      </Button>
+      <Link to={'/sponsor'}>
+        <Button style={{ float: "right", marginTop: "16px", marginRight: "20px" }}>
+          더보기
+        </Button>
+      </Link>
     </div>
-    <div style={{ marginTop: '40px'}}>
+    <div style={{ marginTop: '25px'}}>
       <Footer/>
     </div>
   </div>
