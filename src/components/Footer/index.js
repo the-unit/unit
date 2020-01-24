@@ -15,7 +15,7 @@ export default class Footer extends React.Component {
         <div className="column is-paddingless no-grow-on-mobile">
           <div className='is-center' style={{ width: '211px', margin: 'auto', fontSize: '14px'}}>
             Design by QURIAN, Philographer<br/>
-            <a href="mailto: contact@unit.center">contact@unit.center</a>
+            <a href="mailto: contact@unit.center" className="hover-color">contact@unit.center</a>
           </div>
         </div>
         <div className="column is-paddingless hide-on-mobile">
