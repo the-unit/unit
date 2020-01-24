@@ -9,19 +9,31 @@ const ALL_COUNT = Number.MAX_VALUE;
 
 class PartnerRoll extends React.Component {
   render() {
-    const { data, count, setIsShow, setModalData } = this.props;
+    const { data, count, setIsShow, setModalData, searchText } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <div className="columns is-multiline is-marginless is-vcentered">
         {posts &&
           posts.map(({ node: post }, idx) => {
-            if (idx < count)
-              return (
-                  <Card key={"partnerCard"+idx} {...post} >
+            if (!searchText) {
+              if (idx < count)
+                return (
+                  <Card key={"sponsorCard" + idx} {...post} >
                   </Card>
-              );
-            else return false;
+                )
+              else return false
+            } else {
+              if (
+                (post.frontmatter.name && post.frontmatter.name.toLowerCase().includes(searchText)) ||
+                (post.frontmatter.introduction && post.frontmatter.introduction.includes(searchText))
+              ) {
+                return (
+                  <Card key={"sponsorCard" + idx} {...post} >
+                  </Card>
+                )
+              } else return false
+            }
           })}
       </div>
     );
@@ -36,7 +48,7 @@ PartnerRoll.propTypes = {
   })
 };
 
-export default ({ count, setIsShow, setModalData }) => (
+export default ({ count, setIsShow, setModalData, searchText }) => (
   <StaticQuery
     query={graphql`
       query PartnerRollQuery {
@@ -75,6 +87,6 @@ export default ({ count, setIsShow, setModalData }) => (
         }
       }
     `}
-    render={data => <PartnerRoll data={data} count={count || ALL_COUNT} setIsShow={setIsShow} setModalData={setModalData}/>}
+    render={data => <PartnerRoll data={data} count={count || ALL_COUNT} setIsShow={setIsShow} setModalData={setModalData} searchText={searchText}/>}
   />
 );

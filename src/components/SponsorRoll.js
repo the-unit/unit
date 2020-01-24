@@ -1,42 +1,56 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql, StaticQuery } from "gatsby";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import React from "react"
+import PropTypes from "prop-types"
+import { graphql, StaticQuery } from "gatsby"
+import PreviewCompatibleImage from "./PreviewCompatibleImage"
 import Card from "./Card"
 
-const ALL_COUNT = Number.MAX_VALUE;
+const ALL_COUNT = Number.MAX_VALUE
 
 class SponsorRoll extends React.Component {
   render() {
-    const { data, count, setIsShow, setModalData } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { data, count, setIsShow, setModalData, searchText } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <div className="columns is-multiline is-marginless">
-        {posts &&
-        posts.map(({ node: post }, idx) => {
-          if (idx < count)
-            return (
-              <Card key={"sponsorCard"+idx} {...post} >
-              </Card>
-            );
-          else return false;
-        })}
+        {
+          posts &&
+          posts.map(({ node: post }, idx) => {
+            if (!searchText) {
+              if (idx < count)
+                return (
+                  <Card key={"sponsorCard" + idx} {...post} >
+                  </Card>
+                )
+              else return false
+            } else {
+              if (
+                (post.frontmatter.name && post.frontmatter.name.toLowerCase().includes(searchText)) ||
+                (post.frontmatter.introduction && post.frontmatter.introduction.includes(searchText))
+              ) {
+                return (
+                  <Card key={"sponsorCard" + idx} {...post} >
+                  </Card>
+                )
+              } else return false
+            }
+          })}
       </div>
-    );
+    )
   }
 }
 
 SponsorRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
+      edges: PropTypes.array,
+    }),
   }),
-  count: Number
-};
+  count: PropTypes.number,
+  searchText: PropTypes.string,
+}
 
-export default ({ count, setIsShow, setModalData }) => (
+export default ({ count, setIsShow, setModalData, searchText }) => (
   <StaticQuery
     query={graphql`
       query SponsorRollQuery {
@@ -76,6 +90,7 @@ export default ({ count, setIsShow, setModalData }) => (
         }
       }
     `}
-    render={data => <SponsorRoll data={data} count={count || ALL_COUNT} setIsShow={setIsShow} setModalData={setModalData} />}
+    render={data => <SponsorRoll data={data} count={count || ALL_COUNT} setIsShow={setIsShow}
+                                 setModalData={setModalData} searchText={searchText}/>}
   />
 );

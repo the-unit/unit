@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types';
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -17,7 +18,6 @@ const SearchBarContainer = styled.div`
 const Index = class extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
   }
 
   render() {
@@ -27,7 +27,9 @@ const Index = class extends React.Component {
           display: "block",
           width: '100%',
           border: 0,
-        }} placeholder={"구현필요"}/>
+        }} placeholder={"구현필요"}
+           onChange={(e) => this.props.setSearchText(e.target.value)}
+        />
         <div style={{
           display: "flex",
           alignItems: "center",
@@ -43,6 +45,10 @@ const Index = class extends React.Component {
       </SearchBarContainer>
     )
   }
+}
+
+Index.propTypes = {
+  setSearchText: PropTypes.func
 }
 
 export default Index

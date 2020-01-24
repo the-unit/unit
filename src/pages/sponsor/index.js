@@ -7,6 +7,19 @@ import DetailContent from "../../components/Detail/DetailContent"
 import SearchBar from "../../components/SearchBar"
 
 export default class SponsorIndexPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      searchText: "",
+    }
+  }
+
+  setSearchText = (text) => {
+    this.setState({
+      searchText: text,
+    })
+  }
+
   render() {
     return (
       <Layout>
@@ -44,11 +57,11 @@ export default class SponsorIndexPage extends React.Component {
           marginBottom: "50px",
         }}>
           <div style={{ display: "flex", height: "40px", alignItems: "center", justifyContent: "flex-end" }}>
-            <SearchBar/>
+            <SearchBar setSearchText={this.setSearchText}/>
           </div>
           <div className="container">
             <div className="content">
-              <SponsorRoll/>
+              <SponsorRoll searchText={this.state.searchText}/>
             </div>
           </div>
         </section>
