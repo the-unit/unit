@@ -10,11 +10,16 @@ const CardInnerContainer = styled.div`
   border-radius: 8px;
   border: solid 1px #eeeeee;
   background-color: #ffffff;
-  //padding: 14px 16px 9px 16px;
 `
 
 const FlexContainer = styled.div`
   display: flex;
+`
+
+const ImageContainer = styled.div`
+  height: 104px;
+  background-color: #d8d8d8;
+  border-radius: 7px 7px 0 0;
 `
 
 const MainHeaderContainer = styled.div`
@@ -22,13 +27,13 @@ const MainHeaderContainer = styled.div`
 
 const CardButtonContainer = styled(FlexContainer)`
   justify-content: flex-end;
-  margin-top: 16px;
+  margin-top: ${props => props.image ? "8px" : "16px"};
   margin-right: 16px;
 `
 
 const CardLargeBtn = styled.a`
   margin-left: 4px;
-  margin-bottom: 16px;
+  margin-bottom: ${props => props.image ? "8px" : "16px"};
   width: 72px;
   border-radius: 15px;
   border: solid 1px #979797;
@@ -48,7 +53,7 @@ const TitleContainer = styled.div`
 
 const DescriptionContainer = styled.div`
   width: 256px;
-  height: 60px;
+  height: ${props => props.image ? "40px" : "60px"};
   margin: 7px 16px 0 16px;
   font-size: 14px;
   font-weight: 500;
@@ -58,7 +63,7 @@ const DescriptionContainer = styled.div`
 `
 
 const CardSmallBtn = styled(CardLargeBtn)`
-  margin-bottom: 16px;
+  margin-bottom: ${props => props.image ? "8px" : "16px"};
   width: 32px;
 `
 
@@ -71,6 +76,8 @@ export default class CardContent extends React.Component {
   render() {
     return (
       <CardInnerContainer>
+        <ImageContainer style={{ display: (this.props.image)? 'block' : 'none'}}>
+        </ImageContainer>
         <MainHeaderContainer>
           <TitleContainer>
             <div style={{ display: "inline-block", marginTop: "9px", marginLeft: "16px" }}>
@@ -88,19 +95,19 @@ export default class CardContent extends React.Component {
                 since {this.props.frontmatter && this.props.frontmatter.establishmentYear}
               </span>
           </TitleContainer>
-          <DescriptionContainer>
+          <DescriptionContainer image={this.props.image}>
             {this.props.frontmatter && this.props.frontmatter.introduction}
           </DescriptionContainer>
-          <CardButtonContainer>
+          <CardButtonContainer image={this.props.image}>
             {this.props.frontmatter && this.props.frontmatter.homepage ? (
-                <CardLargeBtn href={this.props.frontmatter.homepage} target="_blank">
+                <CardLargeBtn href={this.props.frontmatter.homepage} target="_blank" image={this.props.image}>
                     웹페이지
                 </CardLargeBtn>
               ) : <></>}
-            <CardSmallBtn>
+            <CardSmallBtn image={this.props.image}>
               f
             </CardSmallBtn>
-            <CardSmallBtn>
+            <CardSmallBtn image={this.props.image}>
               m
             </CardSmallBtn>
           </CardButtonContainer>
@@ -117,4 +124,5 @@ CardContent.propTypes = {
     introduction: PropTypes.string,
     homepage: PropTypes.string,
   }),
+  image: PropTypes.bool
 }

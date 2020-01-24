@@ -19,7 +19,7 @@ class SponsorRoll extends React.Component {
             if (!searchText) {
               if (idx < count)
                 return (
-                  <Card key={"sponsorCard" + idx} {...post} >
+                  <Card key={"sponsorCard" + idx} {...post} image={true}>
                   </Card>
                 )
               else return false
@@ -30,7 +30,7 @@ class SponsorRoll extends React.Component {
                 (post.frontmatter.subName && post.frontmatter.subName.includes(searchText.toLowerCase()))
               ) {
                 return (
-                  <Card key={"sponsorCard" + idx} {...post} >
+                  <Card key={"sponsorCard" + idx} {...post} image={true}>
                   </Card>
                 )
               } else return false
