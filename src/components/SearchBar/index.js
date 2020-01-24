@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SearchBarContainer = styled.div`
   display: flex;
-  margin-right: 24px;
-  line-height: 40px;
+  justify-content: center;
+  align-items: center;
   width: 150px;
   height: 24px;
   border-radius: 15px;
   border: solid 1px #d2d2d2;
   padding: 0 5px;
+  margin-right: 17px;
 `
 
 const Index = class extends React.Component {
@@ -24,9 +25,8 @@ const Index = class extends React.Component {
       <SearchBarContainer>
         <input style={{
           display: "block",
-          margin: "0 auto",
+          width: '100%',
           border: 0,
-          height: 20,
         }} placeholder={"구현필요"}/>
         <div style={{
           display: "flex",
