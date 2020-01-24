@@ -26,7 +26,8 @@ class PartnerRoll extends React.Component {
             } else {
               if (
                 (post.frontmatter.name && post.frontmatter.name.toLowerCase().includes(searchText.toLowerCase())) ||
-                (post.frontmatter.introduction && post.frontmatter.introduction.includes(searchText.toLowerCase()))
+                (post.frontmatter.introduction && post.frontmatter.introduction.includes(searchText.toLowerCase())) ||
+                (post.frontmatter.subName && post.frontmatter.subName.includes(searchText.toLowerCase()))
               ) {
                 return (
                   <Card key={"sponsorCard" + idx} {...post} >
