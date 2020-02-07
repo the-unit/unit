@@ -9,6 +9,7 @@ module.exports = {
     title: 'UNIT',
     description:
       'UNIT PAGE',
+    type: 'website',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

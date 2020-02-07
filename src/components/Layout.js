@@ -12,7 +12,7 @@ import useSiteMetadata from "./SiteMetadata"
 import Footer from "./Footer"
 
 const TemplateWrapper = ({ children, isShow, setIsShow, modalData }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description, type } = useSiteMetadata()
   return (
     <div style={{ maxWidth: `960px`, margin: `0 auto` }}>
       <Helmet>
@@ -45,8 +45,9 @@ const TemplateWrapper = ({ children, isShow, setIsShow, modalData }) => {
         />
         <meta name="theme-color" content="#fff"/>
 
-        <meta property="og:type" content="business.business"/>
+        <meta property="og:type" content={type}/>
         <meta property="og:title" content={title}/>
+        <meta property="og:description" content={description}/>
         <meta property="og:url" content="/"/>
         <meta
           property="og:image"
