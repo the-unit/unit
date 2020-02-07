@@ -17,7 +17,26 @@ const SubHeaderContainer = styled.div`
 
 const BlockContainer = styled.div`
   width: 100%;
-  height: 256px;
+  padding: 28px 84px 24px 48px;
+`
+
+const LinkContainer = styled.div`
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00a300;
+`
+
+const LastDescriptionContainer = styled.div`
+  width: 811px;
+  height: 176px;
+  @media screen and (max-width: 959px) {
+    width: auto;
+    height: auto;
+  }
+  margin: 24px 101px 16px 48px;
+  font-size: 16px;
+  color: #000000;
 `
 
 const AboutUsPage = ({
@@ -54,7 +73,7 @@ const AboutUsPage = ({
       </div>
     </div>
     <section className="section section-bg-color is-paddingless" style={{
-      marginBottom: "50px",
+      marginBottom: "24px",
     }}>
       <BlockContainer>
         <SubHeaderContainer>
@@ -63,14 +82,22 @@ const AboutUsPage = ({
         <div>
           {frontmatter.subDescription}
         </div>
-        <div>
-          {frontmatter.link}
-        </div>
+        <LinkContainer>
+          <a className="hover-green" href={frontmatter.link}>{frontmatter.linkName}</a>
+        </LinkContainer>
       </BlockContainer>
       <AboutDescription event={frontmatter.firstEvent}/>
       <AboutDescription event={frontmatter.secondEvent}/>
       <AboutDescription event={frontmatter.thirdEvent}/>
     </section>
+    <section className="section section-bg-color is-paddingless" style={{
+      marginBottom: "24px",
+    }}>
+      <LastDescriptionContainer>
+        {frontmatter.lastDescription}
+      </LastDescriptionContainer>
+    </section>
+
   </Layout>
 )
 
@@ -87,6 +114,7 @@ AboutUsPage.propTypes = {
         subHeader: PropTypes.string,
         subDescription: PropTypes.string,
         link: PropTypes.string,
+        linkName: PropTypes.string,
         firstEvent: PropTypes.object,
         secondEvent: PropTypes.object,
         thirdEvent: PropTypes.object,
@@ -105,6 +133,7 @@ export const AboutUsPageQuery = <StaticQuery query={graphql`
                 mainDescription2
                 subHeader
                 subDescription
+                linkName
                 link
                 firstEvent {
                     title

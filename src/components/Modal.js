@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 const Modal = class extends React.Component {
   render() {
-    console.log('this.props.isShow is', this.props.isShow);
     return this.props.isShow ? (
       <div className="modal-container">
         <div className="flex-container">

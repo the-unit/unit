@@ -5,6 +5,7 @@ mainDescription1: UNIT은 단체와 기업을 연결하는 중심이 되고,
 mainDescription2: IT 네트워크를 구축하는 것을 목표로 합니다.
 subHeader: Motivation
 subDescription: 연합단체와 연합행사를 운영하면서 내적으로는 단체운영∙정보관리, 외적으로는 다른 단체와의 네트워킹∙기업연계∙후원유치의 어려움을 경험했습니다. 유관 단체들은 에너지 소모 없이 성장에 집중할 수 있도록 돕기 위한 다양한 방법을 모색하고 추진합니다. 이를 통해 각 단체는 자생 할 수 있는 역량을 가지고 가치를 높이며, 나아가 상호 시너지를 통해 더욱 많은 활동을 할 수 있는 기반을 마련하고자 합니다.
+linkName: "* UNIT 단체소개서.pdf"
 link: https://unit.center/
 firstEvent:
   title: United Hackathon “UNITHON”
@@ -32,8 +33,10 @@ thirdEvent:
   eventImage:
     alt: Networking
     image: /img/network-play.jpg
-  description: >      
-    멤버들을 위한 소규모 네트워킹 세션입니다. 하나의 주제로 이야기할 수 있는 자리를 마련합니다.
-lastDescription: 단체들이 성장에만 집중할 수 있는 환경이 조성되어, 개인과 단체의 역량이 향상을 바랍니다. 함께 다양한 기회를 모색하고, 새로운 시도를 고민할 수 있으면 좋겠습니다.
+  description: >
+    멤버들을 위한 소규모 네트워킹 세션입니다.
+    하나의 주제로 이야기할 수 있는 자리를 마련합니다.
+lastDescription: 단체들이 성장에만 집중할 수 있는 환경이 조성되어,개인과 단체의 역량이 향상을 바랍니다.
+    함께 다양한 기회를 모색하고, 새로운 시도를 고민할 수 있으면 좋겠습니다.
 ---
 

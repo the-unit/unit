@@ -5,12 +5,42 @@ import Img from 'gatsby-image'
 
 const AboutDescriptionContentDiv = styled.div`
   display: flex;
+  flex: 1;
+  @media screen and (max-width: 959px) {
+    flex-direction: column-reverse;
+  }
+`
+
+const FlexColumn = styled.div`
+  flex: 1;
+  @media screen and (max-width: 959px) {
+    flex: 0;
+    width: 100%;
+  }
+`
+
+const EventHeader = styled.div`
+  margin-top: 28px;
+  margin-left:48px;
+  height: 48px;
+  font-size: 21px;
+  font-weight: bold;
+  color: black;
+`
+
+const EventDescription = styled.div`
+  margin-left:48px;
+  margin-right:40px;
+  font-size: 16px;
+  color: black;
+  @media screen and (max-width: 959px) {
+    margin-bottom: 24px;
+  } 
 `
 
 export default class AboutDescriptionContent extends React.Component {
   constructor(props) {
     super(props)
-    console.log('decs props', props)
     this.state = {}
 
   }
@@ -18,21 +48,18 @@ export default class AboutDescriptionContent extends React.Component {
   render() {
     return (
       <AboutDescriptionContentDiv>
-        <div style={{flex: 1}}>
-          <div>
+        <FlexColumn style={{flex: 1}}>
+          <EventHeader>
             {this.props.event.title}
-          </div>
-          <div>
-            {this.props.event.title_kr} | {this.props.event.date}
-          </div>
-          <div>
+          </EventHeader>
+          <EventDescription>
+            {this.props.event.title_kr} | {this.props.event.date} <br/>
             {this.props.event.description}
-          </div>
-        </div>
-        <div style={{flex: 1}}>
-          <Img fluid={this.props.event.eventImage.image.childImageSharp.fluid} style={{width: "100%"}}/>
-          {/*{this.props.event.eventImage.image.childImageSharp.fluid+''}*/}
-        </div>
+          </EventDescription>
+        </FlexColumn>
+        <FlexColumn style={{flex: 1}}>
+          <Img fluid={this.props.event.eventImage.image.childImageSharp.fluid}/>
+        </FlexColumn>
       </AboutDescriptionContentDiv>
     )
   }
