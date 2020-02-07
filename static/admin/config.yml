@@ -21,6 +21,24 @@ collections:
           - {label: FirstEvent, name: firstEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
           - {label: SecondEvent, name: secondEvent,   widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
           - {label: ThirdEvent, name: thirdEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+  - name: "aboutUs"
+    label: "AboutUs"
+    files:
+      - file: "src/pages/aboutus/index.md"
+        label: "About Us Page"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-us-page"}
+          - {label: MainHeader, name: mainHeadr, widget: string}
+          - {label: MainDescription1, name: mainDescription1, widget: string}
+          - {label: MainDescription2, name: mainDescription2, widget: string}
+          - {label: SubHeader, name: subHeader, widget: string}
+          - {label: SubDescription, name: subDescription, widget: string}
+          - {label: Link, name: link, widget: string}
+          - {label: FirstEvent, name: firstEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: SecondEvent, name: secondEvent,   widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: ThirdEvent, name: thirdEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: Last Description, name: lastDescription, widget: string}
   - name: "partner"
     label: "Partners"
     folder: "src/pages/partner"
