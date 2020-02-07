@@ -18,7 +18,7 @@ export default class AboutDescriptionContent extends React.Component {
   render() {
     return (
       <AboutDescriptionContentDiv>
-        <div>
+        <div style={{flex: 1}}>
           <div>
             {this.props.event.title}
           </div>
@@ -29,8 +29,9 @@ export default class AboutDescriptionContent extends React.Component {
             {this.props.event.description}
           </div>
         </div>
-        <div>
-          <Img fluid={this.props.event.image.childImageSharp.fluid}/>
+        <div style={{flex: 1}}>
+          <Img fluid={this.props.event.eventImage.image.childImageSharp.fluid} style={{width: "100%"}}/>
+          {/*{this.props.event.eventImage.image.childImageSharp.fluid+''}*/}
         </div>
       </AboutDescriptionContentDiv>
     )
@@ -43,7 +44,7 @@ AboutDescriptionContent.propTypes = {
     title_kr: propTypes.string,
     date: propTypes.string,
     description: propTypes.string,
-    eventImage: propTypes.string,
+    eventImage: propTypes.object,
   })
 }
 
