@@ -16,7 +16,7 @@ firstEvent:
 
 secondEvent:
   title: United Project Festa 
-  title_kr: 유나이티드 프로젝트 페스타
+  title_kr: 프로젝트 페스타
   date: MARCH 2020
   secondEventImage:
     alt: United-Project-Festa
