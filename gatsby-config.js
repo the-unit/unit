@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: 'UNIT',
     description:
-      'UNIT PAGE',
+      'Universal Network for IT',
     type: 'website',
   },
   plugins: [
