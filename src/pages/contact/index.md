@@ -6,11 +6,8 @@ mainDescription2: '유관 단체들과 팀들의 많은 관심 바라며, 궁금
 mainDescription3: 'E-mail : contact@unit.center'
 subHeader: FAQ
 firstFAQ:
-  description1: |
-    UNIT은 통합이 아닌, 각 단체의 성장을 바랍니다. 
-    단체들이 에너지 소모 없이 집중할 수 있는 환경을 만들고자 합니다.
-  description2: |+
-
+  description1: 'UNIT은 통합이 아닌, 각 단체의 성장을 바랍니다.'
+  description2: 단체들이 에너지 소모 없이 집중할 수 있는 환경을 만들고자 합니다.
   title: 1. UNIT의 목표는 IT 단체를 통합하는 것인가요?
 secondFAQ:
   description1: |
