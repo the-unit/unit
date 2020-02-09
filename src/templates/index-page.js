@@ -202,7 +202,6 @@ const IndexPage = ({ data }) => {
     <Layout isShow={isShow} setIsShow={setIsShow} modalData={modalData}>
       <IndexPageTemplate
         image={indexFrontmatter.image}
-        title={indexFrontmatter.title}
         heading={indexFrontmatter.heading}
         subheading={indexFrontmatter.subheading}
         firstEvent={indexFrontmatter.firstEvent}
@@ -234,7 +233,6 @@ export const pageQuery = graphql`
     query IndexPageTemplate {
         index: markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
             frontmatter {
-                title
                 image {
                     childImageSharp {
                         fluid(maxWidth: 2048, quality: 100) {
