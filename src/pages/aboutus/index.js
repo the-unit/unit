@@ -83,9 +83,9 @@ const AboutUsPage = ({
         <div>
           {frontmatter.subDescription}
         </div>
-        <LinkContainer>
-          <a className="hover-green" href={frontmatter.link}>{frontmatter.linkName}</a>
-        </LinkContainer>
+        {/*<LinkContainer>*/}
+        {/*  <a className="hover-green" href={frontmatter.link}>{frontmatter.linkName}</a>*/}
+        {/*</LinkContainer>*/}
       </BlockContainer>
       <AboutDescription event={frontmatter.firstEvent}/>
       <AboutDescription event={frontmatter.secondEvent}/>
