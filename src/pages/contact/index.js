@@ -24,7 +24,7 @@ const SubHeaderContent = styled.div`
 
 const LastCommentContainer = styled.div`
   margin-left:48px;
-  font-size: 16px;
+  font-size: 14px;
   color: black; 
 `
 
