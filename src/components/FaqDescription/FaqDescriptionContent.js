@@ -10,7 +10,7 @@ const FaqDescriptionTitleContainer = styled.div`
   width: 100%;
   padding-top: 20px;
   padding-left: 48px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #000000;
 `

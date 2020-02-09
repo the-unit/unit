@@ -11,7 +11,7 @@ import DetailContent from "../../components/Detail/DetailContent"
 
 const SubHeaderContainer = styled.div`
   height: 48px;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: bold;
   color: #000000;
 `
