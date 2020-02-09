@@ -8,17 +8,17 @@ const FaqDescriptionContentDiv = styled.div`
 
 const FaqDescriptionTitleContainer = styled.div`
   width: 100%;
-  margin-top: 20px;
-  margin-left: 48px;
-  font-size: 21px;
+  padding-top: 20px;
+  padding-left: 48px;
+  font-size: 16px;
   font-weight: bold;
   color: #000000;
 `
 const FaqDescriptionContentContainer = styled.div`
   width: 100%;
   margin-top: 4px;
-  margin-left: 48px;
-  font-size: 16px;
+  padding-left: 48px;
+  font-size: 14px;
   color: #000000;
 `
 
