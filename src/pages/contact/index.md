@@ -28,13 +28,11 @@ forthFAQ:
     * UNIT은 상호 시너지를 낼 수 있는 모두를 위한 행사를 높은 우선순위로 두고 있습니다.
   title: 4. 함께 새로운 것을 해보고 싶어요
 fifthFAQ:
-  description1: |
-    등록방법, 필수요건 작성예정
+  description1: '* 등록방법, 필수요건은 정리중입니다.'
   description2: ㅤ
   title: 5. 파트너로 등록하기
 sixthFAQ:
-  description1: |
-    등록방법, 필수요건 작성예정
+  description1: '* 등록방법, 필수요건은 정리중입니다.'
   description2: ㅤ
   title: 6. 스폰서로 등록하기
 lastComment1: 이 외에 궁금한점이 있다면 언제든지 메일 주세요.
