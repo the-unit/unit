@@ -15,7 +15,7 @@ const SubHeaderContainer = styled.div`
 `
 
 const SubHeaderContent = styled.div`
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   font-weight: bold;
   padding-left: 48px;

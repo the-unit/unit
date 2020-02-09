@@ -23,7 +23,7 @@ const EventHeader = styled.div`
   margin-top: 28px;
   margin-left:48px;
   height: 48px;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: bold;
   color: black;
 `
