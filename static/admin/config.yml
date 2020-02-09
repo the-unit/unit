@@ -29,7 +29,7 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-us-page"}
-          - {label: MainHeader, name: mainHeadr, widget: string}
+          - {label: MainHeader, name: mainHeader, widget: string}
           - {label: MainDescription1, name: mainDescription1, widget: string}
           - {label: MainDescription2, name: mainDescription2, widget: string}
           - {label: SubHeader, name: subHeader, widget: string}
@@ -77,3 +77,24 @@ collections:
       - {label: Homepage, name: homepage, widget: string, required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: Logo, name: logo, widget: image, required: false}
+  - name: "contact"
+    label: "Contact"
+    files:
+      - file: "src/pages/contact/index.md"
+        label: "Contact Page"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: MainHeader, name: mainHeader, widget: string}
+          - {label: MainDescription1, name: mainDescription1, widget: string}
+          - {label: MainDescription2, name: mainDescription2, widget: string}
+          - {label: MainDescription3, name: mainDescription3, widget: string}
+          - {label: SubHeader, name: subHeader, widget: string}
+          - {label: FirstFAQ, name: firstFAQ, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description1, widget: text}, {label: Description, name: description2, widget: text}]}
+          - {label: SecondFAQ, name: secondFAQ, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description1, widget: text}, {label: Description, name: description2, widget: text}]}
+          - {label: ThirdFAQ, name: thirdFAQ, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description1, widget: text}, {label: Description, name: description2, widget: text}]}
+          - {label: FourthFAQ, name: forthFAQ, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description1, widget: text}, {label: Description, name: description2, widget: text}]}
+          - {label: FifthFAQ, name: fifthFAQ, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description1, widget: text}, {label: Description, name: description2, widget: text}]}
+          - {label: SixthFAQ, name: sixthFAQ, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description1, widget: text}, {label: Description, name: description2, widget: text}]}
+          - {label: LastComment1, name: lastComment1, widget: string}
+          - {label: LastComment2, name: lastComment2, widget: string}

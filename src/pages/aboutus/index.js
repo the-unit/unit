@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
@@ -6,7 +7,7 @@ import AboutDescription from "../../components/AboutDescription"
 import Layout from "../../components/Layout"
 import DetailTitleContainer from "../../components/Detail/DetailTitleContainer"
 import DetailContent from "../../components/Detail/DetailContent"
-import { graphql, StaticQuery } from "gatsby"
+
 
 const SubHeaderContainer = styled.div`
   height: 48px;
