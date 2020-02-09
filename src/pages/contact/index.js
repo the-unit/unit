@@ -50,7 +50,8 @@ const ContactPage = ({
           {frontmatter.mainHeader}
         </DetailTitleContainer>
         <DetailContent style={{
-          paddingTop: "43px"
+          paddingTop: "43px",
+          width: "100%"
         }}>
           <div>
             {frontmatter.mainDescription1}
