@@ -1,8 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
-import PreviewCompatibleImage from "./PreviewCompatibleImage"
+import styled from "styled-components"
+
 import Card from "./Card"
+
+const Roll = styled.div`
+  @media screen and (max-width: 959px) {
+    display: flex;  
+    justify-content: center;
+    :after {
+      content: '';
+      width: 320px;
+    }
+  }
+`
 
 const ALL_COUNT = Number.MAX_VALUE
 
@@ -12,7 +24,7 @@ class SponsorRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline is-marginless">
+      <Roll className="columns is-multiline is-marginless">
         {
           posts &&
           posts.map(({ node: post }, idx) => {
@@ -36,7 +48,7 @@ class SponsorRoll extends React.Component {
               } else return false
             }
           })}
-      </div>
+      </Roll>
     )
   }
 }

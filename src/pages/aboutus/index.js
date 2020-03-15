@@ -139,6 +139,7 @@ export const AboutUsPageQuery = <StaticQuery query={graphql`
                 firstEvent {
                     title
                     title_kr
+                    summary
                     date
                     description
                     eventImage {
@@ -154,6 +155,7 @@ export const AboutUsPageQuery = <StaticQuery query={graphql`
                 secondEvent {
                     title
                     title_kr
+                    summary
                     date
                     description
                     eventImage {
@@ -169,6 +171,7 @@ export const AboutUsPageQuery = <StaticQuery query={graphql`
                 thirdEvent {
                     title
                     title_kr
+                    summary
                     date
                     description
                     eventImage {

@@ -17,9 +17,9 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
-          - {label: FirstEvent, name: firstEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
-          - {label: SecondEvent, name: secondEvent,   widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
-          - {label: ThirdEvent, name: thirdEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: FirstEvent, name: firstEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Summary, name: summary, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: SecondEvent, name: secondEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Summary, name: summary, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: ThirdEvent, name: thirdEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Summary, name: summary, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
   - name: "aboutUs"
     label: "AboutUs"
     files:
@@ -36,9 +36,9 @@ collections:
           - {label: LinkName, name: linkName, widget: string}
           - {label: Link, name: link, widget: string}
           - {label: LastDescription, name: lastDescription, widget: string}
-          - {label: FirstEvent, name: firstEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
-          - {label: SecondEvent, name: secondEvent,   widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
-          - {label: ThirdEvent, name: thirdEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: FirstEvent, name: firstEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Summary, name: summary, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: SecondEvent, name: secondEvent,   widget: object, fields: [{label: Title, name: title, widget: string}, {label: Summary, name: summary, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: ThirdEvent, name: thirdEvent, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Summary, name: summary, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
   - name: "partner"
     label: "Partners"
     folder: "src/pages/partner"

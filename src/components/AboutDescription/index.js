@@ -11,7 +11,7 @@ const AboutDescription = class extends React.Component {
 
   render() {
     return (
-      <AboutDescriptionContainer>
+      <AboutDescriptionContainer id={this.props.event.summary}>
         <AboutDescriptionContent event={this.props.event}/>
       </AboutDescriptionContainer>
     )

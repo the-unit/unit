@@ -10,6 +10,7 @@ link: https://unit.center/
 firstEvent:
   title: United Hackathon “UNITHON”
   title_kr: 대학생 연합 해커톤 '유니톤'
+  summary: unithon
   date: SINCE 2015
   eventImage:
     alt: Unithon
@@ -19,7 +20,8 @@ firstEvent:
     2015년 8월 4개의 IT 단체가 뜻을 모아 공동 주관했으며, UNIT은 2016년 7월부터 함께하였습니다.
 secondEvent:
   title: UNITED PROJECT FEST
-  title_kr: 프로젝트 페스트(행사명 미정) 
+  title_kr: 프로젝트 페스트(행사명 미정)
+  summary: ufest
   date: MARCH 2020
   eventImage:
     alt: ProjectLeague
@@ -29,6 +31,7 @@ secondEvent:
 thirdEvent:
   title: Networking
   title_kr: 관심사 기반의 소규모 네트워킹
+  summary: networking
   date: APRIL 2020
   eventImage:
     alt: Networking

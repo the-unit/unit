@@ -101,19 +101,21 @@ export const IndexPageTemplate = ({
     <div>
       {[firstEvent, secondEvent, thirdEvent].map((evt, idx) => {
         return (
-          <div className="event"
-               style={{ height: "120px", backgroundColor: "white", textAlign: "center" }}
-               key={`evt-${idx}`}>
-            <span style={{ fontSize: "16px", fontWeight: "bold", color: "#186f25" }}>
-              {evt.title}
-            </span>
-            <br/>
-            <div style={{ marginTop: "8px" }}>
-              <span style={{ fontSize: "14px", color: "#aeaeae" }}>
-                {evt.title_kr} | {evt.date}
+          <Link to={`/aboutus#${evt.summary}`} key={evt.summary + idx}>
+            <div className="event"
+                 style={{ height: "120px", backgroundColor: "white", textAlign: "center" }}
+                 key={`evt-${idx}`}>
+              <span style={{ fontSize: "16px", fontWeight: "bold", color: "#186f25" }}>
+                {evt.title}
               </span>
+              <br/>
+              <div style={{ marginTop: "8px" }}>
+                <span style={{ fontSize: "14px", color: "#aeaeae" }}>
+                  {evt.title_kr} | {evt.date}
+                </span>
+              </div>
             </div>
-          </div>
+          </Link>
         )
       })}
     </div>
@@ -157,6 +159,7 @@ IndexPageTemplate.propTypes = {
   firstEvent: PropTypes.shape({
     title: PropTypes.string,
     title_kr: PropTypes.string,
+    summary: PropTypes.string,
     date: PropTypes.string,
     description: PropTypes.string,
     firstEventImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -164,6 +167,7 @@ IndexPageTemplate.propTypes = {
   secondEvent: PropTypes.shape({
     title: PropTypes.string,
     title_kr: PropTypes.string,
+    summary: PropTypes.string,
     date: PropTypes.string,
     description: PropTypes.string,
     secondEventImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -171,6 +175,7 @@ IndexPageTemplate.propTypes = {
   thirdEvent: PropTypes.shape({
     title: PropTypes.string,
     title_kr: PropTypes.string,
+    summary: PropTypes.string,
     date: PropTypes.string,
     description: PropTypes.string,
     thirdEventImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -245,6 +250,7 @@ export const pageQuery = graphql`
                 firstEvent {
                     title
                     title_kr
+                    summary
                     date
                     description
                     firstEventImage {
@@ -260,6 +266,7 @@ export const pageQuery = graphql`
                 secondEvent {
                     title
                     title_kr
+                    summary
                     date
                     description
                     secondEventImage {
@@ -275,6 +282,7 @@ export const pageQuery = graphql`
                 thirdEvent {
                     title
                     title_kr
+                    summary
                     date
                     description
                     thirdEventImage {

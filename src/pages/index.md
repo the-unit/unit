@@ -6,6 +6,7 @@ subheading: 대학생 청년 IT 네트워크
 firstEvent:
   title: UNITHON
   title_kr: 대학생 연합 해커톤 '유니톤'
+  summary: unithon
   date: SINCE 2015
   firstEventImage:
     alt: Unithon
@@ -17,6 +18,7 @@ firstEvent:
 secondEvent:
   title: United Project Festa 
   title_kr: 프로젝트 페스타
+  summary: ufest
   date: MARCH 2020
   secondEventImage:
     alt: United-Project-Festa
@@ -26,6 +28,7 @@ secondEvent:
 thirdEvent:
   title: Networking Session
   title_kr: 관심사 기반의 네트워킹 세션
+  summary: networking
   date: April 2020
   thirdEventImage:
     alt: Networking-Session

@@ -8,9 +8,6 @@ const CardContainer = styled.div`
   width: 320px;
   height: ${props => props.image ? "256px" : "191px"};
   background-color: white;
-  @media screen and (max-width: 959px) {
-    margin: auto;
-  }
 `
 
 export default CardContainer

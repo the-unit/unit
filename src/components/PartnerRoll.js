@@ -1,9 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
+import styled from "styled-components"
+
 import Card from "../components/Card"
 
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
+const Roll = styled.div`
+  @media screen and (max-width: 959px) {
+    display: flex;
+    justify-content: center;
+    :after {
+      content: '';
+      width: 320px;
+    }
+  }
+`
 
 const ALL_COUNT = Number.MAX_VALUE;
 
@@ -13,7 +24,7 @@ class PartnerRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="columns is-multiline is-marginless is-vcentered">
+      <Roll className="columns is-multiline is-marginless is-vcentered ">
         {posts &&
           posts.map(({ node: post }, idx) => {
             if (!searchText) {
@@ -36,7 +47,7 @@ class PartnerRoll extends React.Component {
               } else return false
             }
           })}
-      </div>
+      </Roll>
     );
   }
 }

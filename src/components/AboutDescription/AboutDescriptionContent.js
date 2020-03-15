@@ -1,4 +1,4 @@
-import React from "react"
+  import React from "react"
 import styled from "styled-components"
 import propTypes from "prop-types"
 import Img from 'gatsby-image'
@@ -57,8 +57,10 @@ export default class AboutDescriptionContent extends React.Component {
             {this.props.event.description}
           </EventDescription>
         </FlexColumn>
-        <FlexColumn style={{flex: 1}}>
-          <Img fluid={this.props.event.eventImage.image.childImageSharp.fluid}/>
+        <FlexColumn style={{flex: 1 }}>
+          <div style={{ padding: "7.5%" }}>
+            <Img fluid={this.props.event.eventImage.image.childImageSharp.fluid}/>
+          </div>
         </FlexColumn>
       </AboutDescriptionContentDiv>
     )
@@ -69,6 +71,7 @@ AboutDescriptionContent.propTypes = {
   event: propTypes.shape({
     title: propTypes.string,
     title_kr: propTypes.string,
+    summary: propTypes.string,
     date: propTypes.string,
     description: propTypes.string,
     eventImage: propTypes.object,
