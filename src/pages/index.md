@@ -2,7 +2,7 @@
 templateKey: index-page
 image: /img/index-main.jpg
 heading: Universal Network for IT
-subheading: 대학생 청년 IT 네트워크
+subheading: IT 네트워크 유닛
 firstEvent:
   title: UNITHON
   title_kr: 대학생 연합 해커톤 '유니톤'
