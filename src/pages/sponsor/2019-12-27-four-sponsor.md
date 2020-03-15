@@ -1,6 +1,6 @@
 ---
 templateKey: sponsor-post
-name: NAVER D2
+name: NAVER D2 MEMBERS
 subName: 'For Developers, By Developers'
 dept: D2 Campus Partners
 establishmentYear: ''
