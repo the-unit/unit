@@ -14,6 +14,6 @@ tags:
   - 개발자
   - 학생
   - Campus
-logo: /img/flavor_wheel.jpg
+logo: /img/unit-sponsor_logo-02.png
 ---
 
