@@ -1,7 +1,7 @@
 ---
 templateKey: sponsor-post
 name: NAVER D2 MEMBERS
-subName: 'For Developers, By Developers'
+subName: 네이버 D2 캠퍼스
 dept: D2 Campus Partners
 establishmentYear: ''
 slogan: 대학생을 대상으로 예비 개발자들에게 다양한 개발지식과 경험의 나눔을 목표로 합니다.
