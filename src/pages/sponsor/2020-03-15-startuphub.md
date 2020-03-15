@@ -15,5 +15,6 @@ tags:
   - 청년
   - 창업
   - IT
+logo: /img/unit-sponsor_logo-04.png
 ---
 
