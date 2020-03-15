@@ -92,7 +92,7 @@ export default ({ count, setIsShow, setModalData, searchText }) => (
                 date(formatString: "MMMM DD, YYYY")
                 logo {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 286, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
