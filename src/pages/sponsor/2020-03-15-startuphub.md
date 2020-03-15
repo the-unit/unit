@@ -1,7 +1,7 @@
 ---
 templateKey: sponsor-post
-name: StartupHub
-subName: 서울창업허브
+name: 서울창업허브
+subName: StartupHub
 establishmentYear: 2017
 slogan: '시민, 창업기업, 창업 유관기관들이 모두 모여 자유롭게 소통하고 교류하며 꿈이 현실화되는 공간'
 introduction: >-
@@ -15,6 +15,6 @@ tags:
   - 청년
   - 창업
   - IT
-logo: /img/unit-sponsor_logo-04.png
+logo: /img/unit-sponsor_logo-05.png
 ---
 
