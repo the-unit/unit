@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import Img from 'gatsby-image'
 
 const CardInnerContainer = styled.div`
   width: 288px;
@@ -17,8 +17,7 @@ const FlexContainer = styled.div`
 `
 
 const ImageContainer = styled.div`
-  height: 104px;
-  background-color: #d8d8d8;
+  height: 104px;    
   border-radius: 7px 7px 0 0;
 `
 
@@ -77,6 +76,9 @@ export default class CardContent extends React.Component {
     return (
       <CardInnerContainer>
         <ImageContainer style={{ display: (this.props.image)? 'block' : 'none'}}>
+          {
+            (this.props.image && this.props.frontmatter.logo)? <Img fluid={this.props.frontmatter.logo.childImageSharp.fluid}/> : null
+          }
         </ImageContainer>
         <MainHeaderContainer>
           <TitleContainer>
@@ -123,6 +125,7 @@ CardContent.propTypes = {
     establishmentYear: PropTypes.number,
     introduction: PropTypes.string,
     homepage: PropTypes.string,
+    logo: PropTypes.object
   }),
   image: PropTypes.bool
 }
