@@ -94,7 +94,9 @@ export default class CardContent extends React.Component {
               marginRight: "16px",
               fontWeight: 500,
             }}>
-                since {this.props.frontmatter && this.props.frontmatter.establishmentYear}
+              {
+                (this.props.frontmatter.establishmentYear) ? `since ${this.props.frontmatter && this.props.frontmatter.establishmentYear}` : ''
+              }
               </span>
           </TitleContainer>
           <DescriptionContainer image={this.props.image}>
@@ -107,11 +109,17 @@ export default class CardContent extends React.Component {
                 </CardLargeBtn>
               ) : <></>}
             {
-              (this.props.frontmatter.ho)?
+              (this.props.frontmatter.facebook)?
+                <CardSmallBtn>
+                  f
+                </CardSmallBtn> :<></>
             }
-            <CardSmallBtn image={this.props.image}>
-              m
-            </CardSmallBtn>
+            {
+              (this.props.frontmatter.medium)?
+                <CardSmallBtn>
+                  m
+                </CardSmallBtn> :<></>
+            }
           </CardButtonContainer>
         </MainHeaderContainer>
       </CardInnerContainer>
