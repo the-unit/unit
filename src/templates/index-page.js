@@ -199,7 +199,7 @@ const IndexPage = ({ data }) => {
     introduction: "",
     location: "",
     email: "",
-    logo: "",
+    logo: undefined,
     dept: "",
   })
 
