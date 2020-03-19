@@ -55,6 +55,8 @@ collections:
       - {label: Location, name: location, widget: string, required: false}
       - {label: Email, name: email, widget: string, required: false}
       - {label: Homepage, name: homepage, widget: string, required: false}
+      - {label: Facebook, name: facebook, widget: string, required: false}
+      - {label: Medium, name: medium, widget: string, required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: Logo, name: logo, widget: image, required: false}
   - name: "sponsor"

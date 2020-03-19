@@ -106,9 +106,9 @@ export default class CardContent extends React.Component {
                     웹페이지
                 </CardLargeBtn>
               ) : <></>}
-            <CardSmallBtn image={this.props.image}>
-              f
-            </CardSmallBtn>
+            {
+              (this.props.frontmatter.ho)?
+            }
             <CardSmallBtn image={this.props.image}>
               m
             </CardSmallBtn>
@@ -125,6 +125,8 @@ CardContent.propTypes = {
     establishmentYear: PropTypes.number,
     introduction: PropTypes.string,
     homepage: PropTypes.string,
+    facebook: PropTypes.string,
+    medium: PropTypes.string,
     logo: PropTypes.object
   }),
   image: PropTypes.bool

@@ -9,6 +9,8 @@ introduction: 디프만은 2-30대 디자이너, 프로그래머의 네트워크
 location: 위치
 email: 이메일
 homepage: http://teamnexters.com/
+medium: ''
+facebook: ''
 logo: /img/flavor_wheel.jpg
 tags:
   - flavor
