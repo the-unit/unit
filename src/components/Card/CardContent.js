@@ -95,7 +95,7 @@ export default class CardContent extends React.Component {
               fontWeight: 500,
             }}>
               {
-                (this.props.frontmatter.establishmentYear) ? `since ${this.props.frontmatter && this.props.frontmatter.establishmentYear}` : ''
+                (this.props.frontmatter.establishmentYear === 0) ? `since ${this.props.frontmatter.establishmentYear}` : ''
               }
               </span>
           </TitleContainer>
