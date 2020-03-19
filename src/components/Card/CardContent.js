@@ -76,9 +76,9 @@ export default class CardContent extends React.Component {
     return (
       <CardInnerContainer>
         <ImageContainer style={{ display: (this.props.image)? 'block' : 'none'}}>
-          {/*{*/}
-          {/*  (this.props.image && this.props.frontmatter.logo)? <Img fluid={this.props.frontmatter.logo.childImageSharp.fluid}/> : null*/}
-          {/*}*/}
+          {
+            (this.props.image && this.props.frontmatter.logo)? <Img fluid={this.props.frontmatter.logo.childImageSharp.fluid}/> : null
+          }
         </ImageContainer>
         <MainHeaderContainer>
           <TitleContainer>
@@ -95,7 +95,7 @@ export default class CardContent extends React.Component {
               fontWeight: 500,
             }}>
               {
-                (this.props.frontmatter && this.props.frontmatter.establishmentYear === 0) ? `since ${this.props.frontmatter.establishmentYear}` : ''
+                (this.props.frontmatter && this.props.frontmatter.establishmentYear !== 0) ? `since ${this.props.frontmatter.establishmentYear}` : ''
               }
               </span>
           </TitleContainer>
@@ -135,7 +135,7 @@ CardContent.propTypes = {
     homepage: PropTypes.string,
     facebook: PropTypes.string,
     medium: PropTypes.string,
-    // logo: PropTypes.string
+    logo: PropTypes.object
   }),
   image: PropTypes.bool
 }
