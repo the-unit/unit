@@ -11,7 +11,6 @@ email: 이메일
 homepage: http://teamnexters.com/
 medium: ''
 facebook: ''
-logo: /img/flavor_wheel.jpg
 tags:
   - flavor
   - tasting
