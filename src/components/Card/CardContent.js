@@ -109,13 +109,13 @@ export default class CardContent extends React.Component {
                 </CardLargeBtn>
               ) : <></>}
             {
-              (this.props.frontmatter.facebook)?
+              (this.props.frontmatter && this.props.frontmatter.facebook)?
                 <CardSmallBtn>
                   f
                 </CardSmallBtn> :<></>
             }
             {
-              (this.props.frontmatter.medium)?
+              (this.props.frontmatter && this.props.frontmatter.medium)?
                 <CardSmallBtn>
                   m
                 </CardSmallBtn> :<></>
