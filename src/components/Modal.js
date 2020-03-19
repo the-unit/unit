@@ -27,7 +27,7 @@ Modal.propTypes = {
   introduction: PropTypes.string,
   location: PropTypes.string,
   email: PropTypes.string,
-  logo: PropTypes.string,
+  // logo: PropTypes.string,
   dept: PropTypes.string,
   modalData: PropTypes.object
 }
