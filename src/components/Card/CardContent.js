@@ -135,7 +135,7 @@ CardContent.propTypes = {
     homepage: PropTypes.string,
     facebook: PropTypes.string,
     medium: PropTypes.string,
-    logo: PropTypes.object
+    logo: PropTypes.string
   }),
   image: PropTypes.bool
 }
