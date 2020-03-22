@@ -10,7 +10,7 @@ jobs:
       - name: npm install and build and deploy
         run: |
           npm install
-          npm run prebuild
+          npm run build
       - uses: peaceiris/actions-gh-pages@v2
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.GITHUB_TOKEN }}
