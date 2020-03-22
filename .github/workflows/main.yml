@@ -1,4 +1,4 @@
-name: github pages
+name: Gatsby Publish
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  deploy:
-    runs-on: ubuntu-18.04
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
